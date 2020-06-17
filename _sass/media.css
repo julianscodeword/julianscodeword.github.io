@@ -1,0 +1,37 @@
+@media only screen and (max-width: 1000px) {
+	.selected nav, .selected footer {
+		top: 4vh;
+	}
+
+	.selected nav {
+		left: 8vw;
+	}
+
+    .selected footer {
+        right: 8vw;
+    }
+
+	.selected .xword {
+		justify-content: flex-start;
+        margin: 0;
+	}
+
+    .selected .xword .xline {
+        justify-content: flex-start;
+    }
+
+    .selected .xword .head {
+        flex-basis: auto;
+    }
+
+	.selected main {
+		margin-top: 22vh;
+		width: 75vw;
+	}
+
+	main article section {
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+}

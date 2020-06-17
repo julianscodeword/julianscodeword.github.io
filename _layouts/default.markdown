@@ -1,0 +1,5 @@
+---
+layout: base
+---
+
+<main>{{ content }}</main>

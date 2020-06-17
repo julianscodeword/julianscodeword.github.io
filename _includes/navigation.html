@@ -1,0 +1,7 @@
+<nav>
+    {% for item in site.data.navigation %}
+        <a class="xline{% if page.url == item.link %} selected{% endif %}" href="{{ item.link }}">
+            {{ item.prefix }}<b>{{ item.pivot }}</b>{{item.suffix}}
+        </a>
+    {% endfor %}
+</nav>
