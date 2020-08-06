@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content, .article {
+    display: grid;
+    align-items: normal;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 1fr max-content;
+    grid-template-areas:
+    "aside main"
+    "unused footer";
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 3vw;
+    grid-template-rows: max-content 1fr max-content;
+    grid-template-areas:
+    "top"
+    "middle"
+    "bottom";
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) max-content;
+    grid-template-areas:
+    "left center right";
+}
+
+aside { grid-area: aside; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+
+.column-button { grid-area: d; }
+.binding .paged { grid-area: top; }
+.site-links { grid-area: top; }
+.social-links { grid-area: bottom; }
+.legal-text { grid-area: right; }
+.theme-selection { grid-area: center; }
+
+.puzzle { width: 75vw; height: 32vw; grid-area: main; }
+nav .puzzle { width: 100%; height: 40vh; grid-area: top; }
+
+@media only screen and (max-width: 1000px) {
+    nav .puzzle {
+        grid-template-columns: 6vw;
+    }
+
+    .social-links .icon {
+        font-size: 6vw;
+    }
+
+    main {
+        font-size: 2vw;
+    }
+}

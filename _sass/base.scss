@@ -1,0 +1,204 @@
+body {
+    background-image: url('/assets/img/background2.jpg');
+    background-size: cover;
+    font-size: 1em;
+    overflow: hidden;
+    font-family: "Zilla Slab";
+    margin: 8px;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 0 0 0.5em 0;
+}
+
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+aside {
+    mix-blend-mode: screen;
+    padding: 1vw 0 1vw 1vw;
+    z-index: 2;
+}
+
+main {
+    user-select: none;
+    margin: 1vw;
+    padding: 1.5vw;
+    font-size: 1vw;
+    line-height: 1em;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    z-index: 1;
+    /* transition: opacity 500ms 250ms ease-out; */
+}
+
+footer {
+    text-align: right;
+    padding: 0 1vw 1vw 0;
+    z-index: 1;
+    font-size: 1vw;
+}
+
+nav {
+    height: 100%;
+    font-size: 1.4em;
+    white-space: nowrap;
+    transition: all 300ms;
+}
+
+.theme-selector {
+    display: none;
+}
+
+.site-links {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: scale(1.25);
+    transform-origin: 0 0;
+    left: -260px;
+    transition: left 100ms;
+}
+
+.site-links .word {
+    transition: left 200ms;
+    display: block;
+    height: 100%;
+}
+
+.site-links .pivot {
+    opacity: 1;
+}
+
+.site-links {
+    pointer-events: none;
+}
+
+.site-links .word a {
+    display: block;
+    line-height: 0;    
+}
+
+// ul li a span {
+//     user-select: none;
+//     font-size: 1em;
+//     display: inline-block;
+//     padding: 2px 0px;
+//     width: 35px;
+//     height: 35px;
+//     line-height: 31px;
+//     text-align: center;
+//     position: relative;
+//     overflow: hidden;
+//     // opacity: 0;
+//     margin: 3px;
+//     border-radius: 2px;
+//     /* transition: opacity 100ms; */
+// }
+
+// .shift-1 { position: relative; left: -41px; }
+// .shift-2 { position: relative; left: -82px; }
+// .shift-5 { position: relative; left: -205px; }
+
+.binding {
+    height: 100%;
+    overflow: hidden;
+}
+
+.paged {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.binding .paged {
+    opacity: 1;
+}
+
+.binding .paged {
+    position: relative;
+    left: 0;
+    transition: all 500ms;
+    height: 90%;
+}
+
+.book {
+    line-height: 1.5em;
+    column-count: 1;
+    column-gap: 2%;
+    height: 93%;
+}
+
+.columns { column-count: 2; }
+
+.button {
+    border-radius: 2px;
+    border: none;
+    cursor: hand;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: none;
+    transition: all 250ms;
+}
+
+.large {
+    padding: 15px 20px;
+    font-size: 3vh;
+    line-height: 3vh;
+}
+
+.button .text {
+    display: none;
+}
+
+.social-links {
+    line-height: 2vw;
+}
+
+.social-links a {
+    margin: 0;
+}
+
+.social-links .icon {
+    font-size: 3vw;
+    transition: color 250ms;
+}
+
+.theme-selection {
+    text-align: center;
+    transition: color 250ms;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.theme-selection:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+/*
+--- ACTIVE STATE ---
+*/
+
+.active .backdrop {
+    opacity: 1;
+}
+
+.active nav span {
+    opacity: 1;
+}
+
+.active .site-links {
+    left: 0;
+    pointer-events: all;
+}
+
+.navigating main {
+    user-select: none;
+    opacity: 0;
+}

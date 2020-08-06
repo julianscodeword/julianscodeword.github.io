@@ -1,7 +1,9 @@
 <nav>
-    {% for item in site.data.navigation %}
-        <a class="xline{% if page.url == item.link %} selected{% endif %}" href="{{ item.link }}">
-            {{ item.prefix }}<b>{{ item.pivot }}</b>{{item.suffix}}
-        </a>
-    {% endfor %}
+    <x-julian-lo></x-julian-lo>
+
+    <ul class="social-links">
+        <li><a href="#twitter"><i class="icon fab fa-twitter-square" aria-hidden="true"></i></a></li>
+        <li><a href="#github"><i class="icon fab fa-github-square" aria-hidden="true"></i></a></li>
+        <li><a href="#medium"><i class="icon fab fa-medium" aria-hidden="true"></i></a></li>
+    </ul>
 </nav>
