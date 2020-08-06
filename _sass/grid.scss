@@ -60,3 +60,15 @@ nav .puzzle { width: 100%; height: 40vh; grid-area: top; }
         font-size: 2vw;
     }
 }
+
+@media only screen and (max-width: 1600px) {
+    nav {
+        grid-template-columns: 12vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    nav {
+        grid-template-columns: 12vw;
+    }
+}
