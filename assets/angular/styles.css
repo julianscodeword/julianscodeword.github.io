@@ -3,3 +3,9 @@ body {
   font-family: "Roboto Slab";
   margin: 0;
 }
+
+@media only screen and (max-width: 800px) {
+  .book .content {
+    column-count: 1;
+  }
+}
