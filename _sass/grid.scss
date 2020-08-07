@@ -28,7 +28,7 @@ nav {
 
 footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) max-content;
+    grid-template-columns: repeat(2, 1fr) max-content;
     grid-template-areas:
     "left center right";
 }
