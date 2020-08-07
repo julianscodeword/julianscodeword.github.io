@@ -202,3 +202,7 @@ nav {
     user-select: none;
     opacity: 0;
 }
+
+@media only screen and (max-width: 800px) {
+    .columns { column-count: 1; }
+}
