@@ -207,6 +207,6 @@ nav {
     .columns { column-count: 1; }
 }
 
-@media only screen and (max-width: 1500px) { footer { font-size: 1.5vw; } main { padding: 1.5vw; } }
-@media only screen and (max-width: 1000px) { footer { font-size: 2.5vw; } main { padding: 2.5vw; } }
-@media only screen and (max-width: 750px) { footer { font-size: 4vw; } main { padding: 4vw; } }
+@media only screen and (max-width: 1500px) { footer { font-size: 1.5vw; } main { font-size: 1.5vw; padding: 1.5vw; } }
+@media only screen and (max-width: 1000px) { footer { font-size: 2.5vw; } main { font-size: 2.5vw; padding: 2.5vw; } }
+@media only screen and (max-width: 750px) { footer { font-size: 4vw; } main { font-size: 4vw; padding: 4vw; } }
