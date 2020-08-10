@@ -1,2 +1,40 @@
-@media only screen and (max-width: 1000px) {
+@media (orientation: portrait) {
+    .social-links li {
+        display: inline;
+    }
+}
+
+@media (orientation: portrait) {
+    .tltrbr {
+        grid-template-areas:
+            "T"
+            "M"
+            "B";
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr max-content;
+
+        .aside {
+            grid-area: T;
+            height: unset;
+            width: 100%;
+        }
+    
+        .main {
+            grid-area: M;
+            margin: 0;
+            width: 100%;
+        }
+        
+        .footer {
+            grid-area: B;
+            width: calc(100% - 2vmin);
+        }        
+    }
+
+    .tmb {
+        grid-template-areas: "T M B";
+        grid-template-columns: max-content 1fr max-content;
+        grid-template-rows: 1fr;
+        height: unset;
+    }
 }

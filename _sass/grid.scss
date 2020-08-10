@@ -1,58 +1,47 @@
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-}
-
-.content, .article {
+.tltrbr {
     display: grid;
-    align-items: normal;
+    height: 100%;
+    width: 100%;
     grid-template-columns: max-content 1fr;
     grid-template-rows: 1fr max-content;
     grid-template-areas:
-    "aside main"
-    "unused footer";
+        "TL TR"
+        "BL BR";
+    grid-auto-flow: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4vmin;
+
+    .aside {
+        grid-area: TL;
+        height: calc(100% - 2vmin);
+        margin: 0 0 2vmin 0;
+    }
+    
+    .main {
+        grid-area: TR;
+        margin: 0 0 2vmin 2vmin;
+        height: calc(100% - 2vmin);
+        width: calc(100% - 2vmin);
+    }
+    
+    .footer {
+        grid-area: BR;
+        margin: 0 0 0 2vmin;
+        width: calc(100% - 2vmin);
+    }    
 }
 
-nav {
+.tmb {
     display: grid;
-    grid-template-columns: 3vw;
+    grid-template-areas:
+        "T"
+        "M"
+        "B";
+    grid-template-columns: 1fr;
     grid-template-rows: max-content 1fr max-content;
-    grid-template-areas:
-    "top"
-    "middle"
-    "bottom";
-}
+    height: 100%;
 
-footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) max-content;
-    grid-template-areas:
-    "left center right";
-}
-
-aside { grid-area: aside; }
-main { grid-area: main; }
-footer { grid-area: footer; }
-
-.column-button { grid-area: d; }
-.binding .paged { grid-area: top; }
-.site-links { grid-area: top; }
-.social-links { grid-area: bottom; }
-.legal-text { grid-area: right; }
-.theme-selection { grid-area: center; }
-
-.puzzle { width: 75vw; height: 32vw; grid-area: main; }
-nav .puzzle { width: 100%; height: 40vh; grid-area: top; }
-
-@media only screen and (max-width: 1000px) {
-    nav { grid-template-columns: 6vw; }
-    .social-links .icon { font-size: 6vw; }
-}
-
-@media only screen and (max-width: 500px) {
-    nav { grid-template-columns: 12vw; }
-    .social-links .icon { font-size: 12vw; }
+    .top { grid-area: T; }
+    .bottom { grid-area: B; }
 }

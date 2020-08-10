@@ -4,5 +4,5 @@ class: content
 ---
 
 {% include before-content.html %}
-<main>{{ content }}</main>
+<main class="main">{{ content }}</main>
 {% include after-content.html %}

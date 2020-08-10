@@ -1,11 +1,50 @@
 body {
-  background-color: #293330;
-  font-family: "Roboto Slab";
-  margin: 0;
+  background-color: #324323;
 }
 
-@media only screen and (max-width: 800px) {
-  .book .content {
-    column-count: 1;
+@media (max-width: 650px), (max-height: 650px) {
+  :root {
+    --gutter: 1;
+    --scale: calc(var(--max) * 1vmin);
+    --font: 4vmin;
+    --effectiveN: calc(var(--rows) + var(--extra));
+    --unit: calc(var(--xScale) / var(--effectiveN));
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .main {
+    font-size: var(--font);
+  }
+
+  .puzzle.hidden {
+    width: unset;
+    height: var(--unit);
+  }
+
+  .hidden .wrapper {
+    left: calc(-1 * var(--margin));
+    top: calc(-1 * var(--margin) + var(--offset));
+  }
+
+  .wrapper {
+    transition: 500ms top;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(var(--m), var(--unit));
+    grid-template-columns: repeat(var(--n), var(--unit));
+  }
+
+  .puzzle:hover .wrapper {
+    top: 0;
+  }
+
+  .space {
+    grid-column: unset;
+    grid-row: var(--space) span;
   }
 }
