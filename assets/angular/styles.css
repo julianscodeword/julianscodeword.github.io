@@ -8,38 +8,23 @@
   }
 }
 @media (orientation: portrait) {
-  body {
-    align-items: flex-start;
-    justify-content: center;
-  }
-
-  .main {
-    font-size: var(--font);
-  }
-
-  .puzzle.hidden {
+  .puzzle {
     width: unset;
     height: var(--unit);
   }
-
-  .hidden .wrapper {
+  .puzzle .wrapper {
     left: calc(-1 * var(--margin));
     top: calc(-1 * var(--margin) + var(--offset));
-  }
-
-  .wrapper {
     transition: 500ms top;
     grid-auto-flow: column;
     grid-template-rows: repeat(var(--m), var(--unit));
     grid-template-columns: repeat(var(--n), var(--unit));
   }
-
-  .puzzle:hover .wrapper {
-    top: 0;
-  }
-
-  .space {
+  .puzzle .wrapper .space {
     grid-column: unset;
     grid-row: var(--space) span;
+  }
+  .puzzle.active .wrapper {
+    top: 0;
   }
 }

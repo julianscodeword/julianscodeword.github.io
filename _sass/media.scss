@@ -5,6 +5,15 @@
 }
 
 @media (orientation: portrait) {
+    body {
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .main {
+        font-size: var(--font);
+    }
+
     .tltrbr {
         grid-template-areas:
             "T"
