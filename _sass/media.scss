@@ -1,3 +1,31 @@
+:root {
+    --columns: 12;
+    --gutter: 2;
+    --rows: 6;
+    --extra: 3;
+    --scale: 33vmin;
+    --max: 95;
+    --maxScale: calc(var(--max) * 1vmax);
+    --m: calc(var(--columns) + 2 * var(--gutter));
+    --n: var(--rows);
+    --ratio: calc(var(--m) / var(--n));
+    --flippedRatio: calc(1 / var(--ratio));
+    --xScale: min(var(--scale), calc(var(--maxScale) * var(--flippedRatio)));
+    --font: 4vmin;
+    --effectiveN: calc(var(--rows) + var(--extra));
+    --unit: calc(var(--xScale) / var(--effectiveN));
+}
+
+@media (max-width: 650px), (max-height: 650px) {
+    :root {
+        --gutter: 1;
+        --scale: calc(var(--max) * 1vmin);
+        --font: 4vmin;
+        --effectiveN: calc(var(--rows) + var(--extra));
+        --unit: calc(var(--xScale) / var(--effectiveN));
+    }
+}
+
 @media (orientation: portrait) {
     .social-links li {
         display: inline;
