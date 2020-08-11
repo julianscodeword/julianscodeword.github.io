@@ -37,14 +37,14 @@ body.navigating .main {
 }
 
 .social-links a {
-    color: rgb(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     font-size: var(--unit);
     display: inline-block;
     transition: 500ms color;
 }
 
 .social-links a:hover {
-    color: rgb(255, 255, 255, 1.0);
+    color: rgba(255, 255, 255, 1.0);
 }
 
 .social-links i {
