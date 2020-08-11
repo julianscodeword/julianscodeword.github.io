@@ -7,24 +7,3 @@
     --unit: calc(var(--xScale) / var(--effectiveN));
   }
 }
-@media (orientation: portrait) {
-  .puzzle {
-    width: unset;
-    height: var(--unit);
-  }
-  .puzzle .wrapper {
-    left: calc(-1 * var(--margin));
-    top: calc(-1 * var(--margin) + var(--offset));
-    transition: 500ms top;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(var(--m), var(--unit));
-    grid-template-columns: repeat(var(--n), var(--unit));
-  }
-  .puzzle .wrapper .space {
-    grid-column: unset;
-    grid-row: var(--space) span;
-  }
-  .puzzle.active .wrapper {
-    top: 0;
-  }
-}
