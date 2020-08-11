@@ -1,7 +1,3 @@
-body {
-  background-color: #324323;
-}
-
 @media (max-width: 650px), (max-height: 650px) {
   :root {
     --gutter: 1;
@@ -11,7 +7,6 @@ body {
     --unit: calc(var(--xScale) / var(--effectiveN));
   }
 }
-
 @media (orientation: portrait) {
   body {
     align-items: flex-start;
