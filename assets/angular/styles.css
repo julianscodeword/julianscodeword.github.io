@@ -1,3 +1,25 @@
+:root {
+  --gutter: 2;
+  --offsetBase: 5;
+  --extra: 3;
+  --maxMargin: 2px;
+  --scale: 33vmin;
+  --max: 95;
+  --maxScale: calc(var(--max) * 1vmax);
+  --borderRadius: 2px;
+  --font: 2.5vmin;
+  --offsetWithGutter: calc(var(--offsetBase) + var(--gutter));
+  --m: calc(var(--columns) + 2 * var(--gutter));
+  --n: var(--rows);
+  --ratio: calc(var(--m) / var(--n));
+  --flippedRatio: calc(1 / var(--ratio));
+  --margin: min(0.5vmin, var(--maxMargin));
+  --xScale: min(var(--scale), calc(var(--maxScale) * var(--flippedRatio)));
+  --yScale: min(calc(var(--scale) * var(--ratio)), var(--maxScale));
+  --unit: calc(var(--xScale) / var(--n));
+  --offset: calc(-1 * var(--unit) * var(--offsetWithGutter));
+}
+
 @media (max-width: 650px), (max-height: 650px) {
   :root {
     --gutter: 1;

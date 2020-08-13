@@ -54510,21 +54510,24 @@ let BookComponent = /*@__PURE__*/ (() => {
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("columns", ctx.isSplitIntoColumns)("book", ctx.isABook);
             }
-        }, inputs: { isSplitIntoColumns: "isSplitIntoColumns", isABook: "isABook", pageNumber: "pageNumber", units: "units" }, decls: 4, vars: 5, consts: [[1, "binding", "top", 3, "ngStyle"], ["content", ""], ["name", "content"], [1, "bottom", 3, "pageNumber", "numberOfPages", "flippedTo"]], template: function BookComponent_Template(rf, ctx) {
+        }, inputs: { isSplitIntoColumns: "isSplitIntoColumns", isABook: "isABook", pageNumber: "pageNumber", units: "units" }, decls: 5, vars: 5, consts: [[1, "wrapper"], [1, "binding", "top", 3, "ngStyle"], ["content", ""], ["name", "content"], [1, "bottom", 3, "pageNumber", "numberOfPages", "flippedTo"]], template: function BookComponent_Template(rf, ctx) {
             if (rf & 1) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0, 1);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "slot", 2);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1, 2);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "slot", 3);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "x-pager", 3);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("flippedTo", function BookComponent_Template_x_pager_flippedTo_3_listener($event) { return ctx.flipTo($event); });
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "x-pager", 4);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("flippedTo", function BookComponent_Template_x_pager_flippedTo_4_listener($event) { return ctx.flipTo($event); });
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             }
             if (rf & 2) {
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](3, _c0, ctx.pageOffsetWithUnits));
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("pageNumber", ctx.pageNumber)("numberOfPages", ctx.numberOfPages);
             }
-        }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgStyle"], _pager_pager_component__WEBPACK_IMPORTED_MODULE_2__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  column-count: 2;\n}\n@media (orientation: portrait) {\n  :host .binding {\n    column-count: 2;\n  }\n}"], encapsulation: 3 });
+        }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgStyle"], _pager_pager_component__WEBPACK_IMPORTED_MODULE_2__["PagerComponent"]], styles: [":host .wrapper {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .wrapper .top {\n  grid-area: BINDING;\n  overflow: hidden;\n}\n:host .wrapper .bottom {\n  grid-area: NAV;\n}\n:host .wrapper .binding {\n  column-count: 2;\n}\n@media (orientation: portrait) {\n  :host .wrapper .binding {\n    column-count: 2;\n  }\n}"], encapsulation: 3 });
     return BookComponent;
 })();
 
@@ -54809,51 +54812,6 @@ class Puzzle {
 
 /***/ }),
 
-/***/ "./src/app/models/puzzle/style.factory.ts":
-/*!************************************************!*\
-  !*** ./src/app/models/puzzle/style.factory.ts ***!
-  \************************************************/
-/*! exports provided: StyleFactory */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyleFactory", function() { return StyleFactory; });
-class StyleFactory {
-    static create(dimensions, appearance) {
-        return `
-            --columns: ${dimensions.width};
-            --rows: ${dimensions.height};
-            --gutter: 2;
-            --offsetBase: 5;
-            --extra: 3;
-        
-            --maxMargin: 2px;
-            --scale: 33vmin;
-            --max: 95;
-            --maxScale: calc(var(--max) * 1vmax);
-            --borderRadius: 2px;
-            --font: 2.5vmin;
-        
-            --offsetWithGutter: calc(var(--offsetBase) + var(--gutter));
-            --m: calc(var(--columns) + 2 * var(--gutter));
-            --n: var(--rows);
-            --ratio: calc(var(--m) / var(--n));
-            --flippedRatio: calc(1 / var(--ratio));
-            --margin: min(0.5vmin, var(--maxMargin));
-            --xScale: min(var(--scale), calc(var(--maxScale) * var(--flippedRatio)));
-            --yScale: min(calc(var(--scale) * var(--ratio)), var(--maxScale));
-            --unit: calc(var(--xScale) / var(--n));
-            --offset: calc(-1 * var(--unit) * var(--offsetWithGutter));
-            --revealDuration: ${appearance.revealDuration}ms;
-            --highlightDuration: ${appearance.highlightDuration}ms;
-        `;
-    }
-}
-
-
-/***/ }),
-
 /***/ "./src/app/models/word.outline.ts":
 /*!****************************************!*\
   !*** ./src/app/models/word.outline.ts ***!
@@ -54996,7 +54954,7 @@ let LineComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.outline.word.letters);
             }
-        }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgStyle"]], styles: ["[_nghost-%COMP%] {\n  display: contents;\n}\n[_nghost-%COMP%]   .block[_ngcontent-%COMP%] {\n  display: block;\n  text-align: center;\n  border: var(--margin) solid black;\n  font-size: var(--font);\n  color: black;\n  font-weight: bold;\n  border-radius: calc(var(--margin) + var(--borderRadius));\n  transition: var(--highlightDuration) background-color;\n  mix-blend-mode: screen;\n  cursor: pointer;\n}\n[_nghost-%COMP%]   .block[_ngcontent-%COMP%]::before {\n  content: \"\";\n  display: inline-block;\n  height: 100%;\n  vertical-align: middle;\n}\n[_nghost-%COMP%]   .block.prefix[_ngcontent-%COMP%] {\n  grid-column: calc(var(--prefixsize) + var(--gutter)) span;\n}\n[_nghost-%COMP%]   .block.suffix[_ngcontent-%COMP%] {\n  grid-column: calc(var(--suffixsize) + var(--gutter)) span;\n}\n[_nghost-%COMP%]   .block.pivot[_ngcontent-%COMP%] {\n  pointer-events: all;\n}\n[_nghost-%COMP%]   .block.suffix[_ngcontent-%COMP%] {\n  visibility: hidden;\n}\n[_nghost-%COMP%]   .block.nonpivot[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0);\n}\n[_nghost-%COMP%]   .block.space[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0);\n}\n[_nghost-%COMP%]   .block.pivot[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.5);\n}\n.revealed[_nghost-%COMP%]   .block.space[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.05);\n}\n.revealed[_nghost-%COMP%]   .block.arm[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.4);\n}\n.revealed[_nghost-%COMP%]   .block.pivot[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.8);\n}\n.revealed.active[_nghost-%COMP%]   .block.letter[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 1);\n}\n.revealed.active[_nghost-%COMP%]   .block.space[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.2);\n}\n@media (orientation: portrait) {\n  .line[_ngcontent-%COMP%]   .block.space[_ngcontent-%COMP%] {\n    grid-column: unset;\n    grid-row: var(--space) span;\n  }\n}"] });
+        }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgStyle"]], styles: ["[_nghost-%COMP%] {\n  display: contents;\n}\n[_nghost-%COMP%]   .block[_ngcontent-%COMP%] {\n  display: block;\n  text-align: center;\n  border: var(--margin) solid black;\n  font-size: var(--font);\n  color: black;\n  font-weight: bold;\n  border-radius: calc(var(--margin) + var(--borderRadius));\n  transition: var(--highlightDuration) background-color;\n  mix-blend-mode: screen;\n  cursor: pointer;\n}\n[_nghost-%COMP%]   .block[_ngcontent-%COMP%]::before {\n  content: \"\";\n  display: inline-block;\n  height: 100%;\n  vertical-align: middle;\n}\n[_nghost-%COMP%]   .block.prefix[_ngcontent-%COMP%] {\n  grid-column: calc(var(--prefixsize) + var(--gutter)) span;\n}\n[_nghost-%COMP%]   .block.suffix[_ngcontent-%COMP%] {\n  grid-column: calc(var(--suffixsize) + var(--gutter)) span;\n}\n[_nghost-%COMP%]   .block.pivot[_ngcontent-%COMP%] {\n  pointer-events: all;\n}\n[_nghost-%COMP%]   .block.suffix[_ngcontent-%COMP%] {\n  visibility: hidden;\n}\n[_nghost-%COMP%]   .block.nonpivot[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0);\n}\n[_nghost-%COMP%]   .block.pivot[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.8);\n}\n.revealed[_nghost-%COMP%]   .block.space[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.05);\n}\n.revealed[_nghost-%COMP%]   .block.arm[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.4);\n}\n.revealed[_nghost-%COMP%]   .block.pivot[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.8);\n}\n.revealed.active[_nghost-%COMP%]   .block.space[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.2);\n}\n.revealed.active[_nghost-%COMP%]   .block.letter[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 1);\n}\n@media (orientation: portrait) {\n  [_nghost-%COMP%]   .block.prefix[_ngcontent-%COMP%] {\n    grid-column: unset;\n    grid-row: calc(var(--prefixsize) + var(--gutter)) span;\n  }\n  [_nghost-%COMP%]   .block.suffix[_ngcontent-%COMP%] {\n    grid-column: unset;\n    grid-row: calc(var(--suffixsize) + var(--gutter)) span;\n  }\n}"] });
     return LineComponent;
 })();
 
@@ -55014,11 +54972,9 @@ let LineComponent = /*@__PURE__*/ (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PuzzleComponent", function() { return PuzzleComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _models_puzzle_style_factory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../models/puzzle/style.factory */ "./src/app/models/puzzle/style.factory.ts");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _line_line_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./line/line.component */ "./src/app/puzzle/line/line.component.ts");
-
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _line_line_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./line/line.component */ "./src/app/puzzle/line/line.component.ts");
 
 
 
@@ -55058,11 +55014,16 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
                 this.renderer.removeClass(document.body, 'navigating');
         }
         ngOnInit() {
-            this.style = this.sanitizer.bypassSecurityTrustStyle(_models_puzzle_style_factory__WEBPACK_IMPORTED_MODULE_1__["StyleFactory"].create(this.outline.dimensions, this.appearance));
+            this.style = this.sanitizer.bypassSecurityTrustStyle(`
+        --columns: ${this.outline.dimensions.width};
+        --rows: ${this.outline.dimensions.height};
+        --revealDuration: ${this.appearance.revealDuration}ms;
+        --highlightDuration: ${this.appearance.highlightDuration}ms;
+      `);
         }
         wordClicked(target) { this.isFinished = this.appearance.isIntrusive; this.onWordClicked.emit(target); }
     }
-    PuzzleComponent.ɵfac = function PuzzleComponent_Factory(t) { return new (t || PuzzleComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"])); };
+    PuzzleComponent.ɵfac = function PuzzleComponent_Factory(t) { return new (t || PuzzleComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"])); };
     PuzzleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PuzzleComponent, selectors: [["x-puzzle"]], hostVars: 10, hostBindings: function PuzzleComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mouseover", function PuzzleComponent_mouseover_HostBindingHandler() { return ctx.mouseOver(); })("mouseout", function PuzzleComponent_mouseout_HostBindingHandler() { return ctx.mouseOut(); });
@@ -55081,7 +55042,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.outline.lines);
             }
-        }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _line_line_component__WEBPACK_IMPORTED_MODULE_4__["LineComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgClass"]], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  mix-blend-mode: screen;\n  width: var(--unit);\n  pointer-events: none;\n}\n[_nghost-%COMP%]   .wrapper[_ngcontent-%COMP%] {\n  position: relative;\n  transition: var(--revealDuration) left;\n  display: grid;\n  grid-auto-flow: row;\n  grid-template-columns: repeat(var(--m), var(--unit));\n  grid-template-rows: repeat(var(--n), var(--unit));\n  top: calc(-1 * var(--margin));\n  left: calc(-1 * var(--margin) + var(--offset));\n}\n.active[_nghost-%COMP%] {\n  pointer-events: all;\n}\n.active[_nghost-%COMP%]   .wrapper[_ngcontent-%COMP%] {\n  left: calc(-1 * var(--margin));\n}\n@media (orientation: portrait) {\n  .puzzle[_ngcontent-%COMP%] {\n    width: unset;\n    height: var(--unit);\n  }\n  .puzzle[_ngcontent-%COMP%]   .wrapper[_ngcontent-%COMP%] {\n    left: calc(-1 * var(--margin));\n    top: calc(-1 * var(--margin) + var(--offset));\n    transition: 500ms top;\n    grid-auto-flow: column;\n    grid-template-rows: repeat(var(--m), var(--unit));\n    grid-template-columns: repeat(var(--n), var(--unit));\n  }\n  .puzzle.active[_ngcontent-%COMP%]   .wrapper[_ngcontent-%COMP%] {\n    top: 0;\n  }\n}"] });
+        }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _line_line_component__WEBPACK_IMPORTED_MODULE_3__["LineComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgClass"]], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  mix-blend-mode: screen;\n  width: var(--unit);\n  pointer-events: none;\n}\n[_nghost-%COMP%]   .wrapper[_ngcontent-%COMP%] {\n  position: relative;\n  transition: var(--revealDuration) left;\n  display: grid;\n  grid-auto-flow: row;\n  grid-template-columns: repeat(var(--m), var(--unit));\n  grid-template-rows: repeat(var(--n), var(--unit));\n  top: calc(-1 * var(--margin));\n  left: calc(-1 * var(--margin) + var(--offset));\n}\n.active[_nghost-%COMP%] {\n  pointer-events: all;\n}\n.active[_nghost-%COMP%]   .wrapper[_ngcontent-%COMP%] {\n  left: calc(-1 * var(--margin));\n}\n@media (orientation: portrait) {\n  [_nghost-%COMP%] {\n    width: unset;\n    height: var(--unit);\n  }\n  [_nghost-%COMP%]   .wrapper[_ngcontent-%COMP%] {\n    left: calc(-1 * var(--margin));\n    top: calc(-1 * var(--margin) + var(--offset));\n    transition: 500ms top;\n    grid-auto-flow: column;\n    grid-template-rows: repeat(var(--m), var(--unit));\n    grid-template-columns: repeat(var(--n), var(--unit));\n  }\n  .active[_nghost-%COMP%]   .wrapper[_ngcontent-%COMP%] {\n    top: 0;\n  }\n}"] });
     return PuzzleComponent;
 })();
 

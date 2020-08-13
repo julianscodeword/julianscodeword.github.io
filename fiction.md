@@ -3,8 +3,6 @@ layout: default
 title: Home
 ---
 
-<h1>Fiction</h1>
-
 <x-book>
     <span slot="left">
         <i class="icon fa fa-arrow-circle-left"></i>

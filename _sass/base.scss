@@ -34,12 +34,15 @@ body.navigating .main {
 .social-links li {
     margin-top: calc(2 * var(--margin));
     display: block;
+    font-size: 0;
 }
 
 .social-links a {
     color: rgba(255, 255, 255, 0.8);
     font-size: var(--unit);
     display: inline-block;
+    height: calc(0.9 * var(--unit));
+    line-height: var(--unit);
     transition: 500ms color;
 }
 

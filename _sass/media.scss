@@ -5,15 +5,15 @@
     --extra: 3;
     --scale: 33vmin;
     --max: 95;
+    --font: 2.5vmin;
     --maxScale: calc(var(--max) * 1vmax);
     --m: calc(var(--columns) + 2 * var(--gutter));
     --n: var(--rows);
     --ratio: calc(var(--m) / var(--n));
     --flippedRatio: calc(1 / var(--ratio));
     --xScale: min(var(--scale), calc(var(--maxScale) * var(--flippedRatio)));
-    --font: 4vmin;
     --effectiveN: calc(var(--rows) + var(--extra));
-    --unit: calc(var(--xScale) / var(--effectiveN));
+    --unit: calc(var(--xScale) / var(--n));
 }
 
 @media (max-width: 650px), (max-height: 650px) {
@@ -73,5 +73,9 @@
         grid-template-columns: max-content 1fr max-content;
         grid-template-rows: 1fr;
         height: unset;
+    }
+
+    .social-links li {
+        display: inline;
     }
 }
