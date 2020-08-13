@@ -21,7 +21,8 @@
     .main {
         grid-area: TR;
         margin: 0 0 2vmin 2vmin;
-        height: calc(100% - 2vmin);
+        // height: calc(100% - 2vmin);
+        height: 250px;
         width: calc(100% - 2vmin);
     }
     
