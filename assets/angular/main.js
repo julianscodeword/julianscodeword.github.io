@@ -55015,7 +55015,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
             this.isFinished = false;
             this.onWordClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
-        mouseEvents(event) { console.log(event); }
+        mouseEvents(event) { event.stopPropagation(); console.log(event); }
         get isIntrusive() { return this.appearance.isIntrusive; }
         setNavigating(isNavigating) {
             if (isNavigating)
