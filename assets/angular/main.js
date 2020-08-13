@@ -54488,7 +54488,7 @@ let BookComponent = /*@__PURE__*/ (() => {
             console.log("No. of Pages", this.numberOfPages);
         }
         get pageOffset() {
-            return (this.pageNumber - 1) * this.pageWidth;
+            return (1 - this.pageNumber) * this.pageWidth;
         }
         get pageOffsetWithUnits() {
             return `${this.pageOffset}${this.units}`;
