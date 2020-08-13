@@ -47,8 +47,8 @@
             "T"
             "M"
             "B";
-        grid-template-columns: 1fr;
-        grid-template-rows: max-content 1fr max-content;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: max-content minmax(0, 1fr) max-content;
 
         .aside {
             grid-area: T;
@@ -70,8 +70,8 @@
 
     .tmb {
         grid-template-areas: "T M B";
-        grid-template-columns: max-content 1fr max-content;
-        grid-template-rows: 1fr;
+        grid-template-columns: max-content minmax(0, 1fr) max-content;
+        grid-template-rows: minmax(0, 1fr);
         height: unset;
     }
 

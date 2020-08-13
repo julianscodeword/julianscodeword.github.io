@@ -3,8 +3,8 @@
     height: var(--vh);
     max-height: var(--vh);
     width: 100vw;
-    grid-template-columns: max-content 1fr;
-    grid-template-rows: 1fr max-content;
+    grid-template-columns: max-content minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) max-content;
     grid-template-areas:
         "TL TR"
         "BL BR";
@@ -39,8 +39,8 @@
         "T"
         "M"
         "B";
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content 1fr max-content;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: max-content minmax(0, 1fr) max-content;
     height: 100%;
 
     .top { grid-area: T; }
