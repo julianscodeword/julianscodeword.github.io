@@ -54510,24 +54510,21 @@ let BookComponent = /*@__PURE__*/ (() => {
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("columns", ctx.isSplitIntoColumns)("book", ctx.isABook);
             }
-        }, inputs: { isSplitIntoColumns: "isSplitIntoColumns", isABook: "isABook", pageNumber: "pageNumber", units: "units" }, decls: 5, vars: 5, consts: [[1, "wrapper"], [1, "binding", "top", 3, "ngStyle"], ["content", ""], ["name", "content"], [1, "bottom", 3, "pageNumber", "numberOfPages", "flippedTo"]], template: function BookComponent_Template(rf, ctx) {
+        }, inputs: { isSplitIntoColumns: "isSplitIntoColumns", isABook: "isABook", pageNumber: "pageNumber", units: "units" }, decls: 4, vars: 5, consts: [[1, "binding", "top", 3, "ngStyle"], ["content", ""], ["name", "content"], [1, "bottom", 3, "pageNumber", "numberOfPages", "flippedTo"]], template: function BookComponent_Template(rf, ctx) {
             if (rf & 1) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1, 2);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "slot", 3);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0, 1);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "slot", 2);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "x-pager", 4);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("flippedTo", function BookComponent_Template_x_pager_flippedTo_4_listener($event) { return ctx.flipTo($event); });
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "x-pager", 3);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("flippedTo", function BookComponent_Template_x_pager_flippedTo_3_listener($event) { return ctx.flipTo($event); });
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             }
             if (rf & 2) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](3, _c0, ctx.pageOffsetWithUnits));
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("pageNumber", ctx.pageNumber)("numberOfPages", ctx.numberOfPages);
             }
-        }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgStyle"], _pager_pager_component__WEBPACK_IMPORTED_MODULE_2__["PagerComponent"]], styles: [":host .wrapper {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .wrapper .top {\n  grid-area: BINDING;\n  overflow: hidden;\n}\n:host .wrapper .bottom {\n  grid-area: NAV;\n}\n:host .wrapper .binding {\n  column-count: 2;\n}\n@media (orientation: portrait) {\n  :host .wrapper .binding {\n    column-count: 2;\n  }\n}"], encapsulation: 3 });
+        }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgStyle"], _pager_pager_component__WEBPACK_IMPORTED_MODULE_2__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  height: 100%;\n  overflow: hidden;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  column-count: 2;\n}\n@media (orientation: portrait) {\n  :host .binding {\n    column-count: 2;\n  }\n}"], encapsulation: 3 });
     return BookComponent;
 })();
 
