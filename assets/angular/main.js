@@ -54573,7 +54573,7 @@ let PagerComponent = /*@__PURE__*/ (() => {
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("pager", ctx.isAPager);
             }
-        }, inputs: { isAPager: "isAPager", pageNumber: "pageNumber", numberOfPages: "numberOfPages" }, outputs: { flippedTo: "flippedTo" }, decls: 6, vars: 0, consts: [[1, "button", "back-button", 3, "click"], ["name", "left"], [1, "icon", "fa", "fa-arrow-circle-left"], [1, "button", "next-button", 3, "click"], ["name", "right"], [1, "icon", "fa", "fa-arrow-circle-right"]], template: function PagerComponent_Template(rf, ctx) {
+        }, inputs: { isAPager: "isAPager", pageNumber: "pageNumber", numberOfPages: "numberOfPages" }, outputs: { flippedTo: "flippedTo" }, decls: 6, vars: 0, consts: [[1, "button", "back-button", "left", 3, "click"], ["name", "left"], [1, "icon", "fa", "fa-arrow-circle-left"], [1, "button", "next-button", "right", 3, "click"], ["name", "right"], [1, "icon", "fa", "fa-arrow-circle-right"]], template: function PagerComponent_Template(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 0);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PagerComponent_Template_span_click_0_listener() { return ctx.goToPreviousPage(); });
