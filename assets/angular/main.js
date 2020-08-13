@@ -54470,6 +54470,7 @@ let BookComponent = /*@__PURE__*/ (() => {
             this.units = "px";
         }
         flipTo(pageNumber) {
+            this.refreshWidths();
             console.log("flip to", pageNumber);
             this.pageNumber = pageNumber;
             this.log();
