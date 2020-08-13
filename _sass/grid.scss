@@ -1,6 +1,7 @@
 .tltrbr {
     display: grid;
     height: var(--vh);
+    max-height: var(--vh);
     width: 100vw;
     grid-template-columns: max-content 1fr;
     grid-template-rows: 1fr max-content;
