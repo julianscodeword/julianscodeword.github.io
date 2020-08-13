@@ -55008,16 +55008,23 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
         constructor(sanitizer, renderer) {
             this.sanitizer = sanitizer;
             this.renderer = renderer;
-            this.hasFocus = false;
             this.isActive = false;
             this.isPuzzle = true;
             this.isFinished = false;
             this.onWordClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
-        mouseOver() { this.isActive = true; this.setNavigating(true); }
-        mouseOut() { this.isActive = false; this.setNavigating(false); }
-        click() { this.hasFocus = true; }
-        clickDocument() { this.isActive = this.hasFocus; this.hasFocus = false; }
+        mouseOver(event) {
+            event.stopPropagation();
+            this.isActive = true;
+            this.setNavigating(true);
+            return false;
+        }
+        mouseOut(event) {
+            event.stopPropagation();
+            this.isActive = false;
+            this.setNavigating(false);
+            return false;
+        }
         get isIntrusive() { return this.appearance.isIntrusive; }
         setNavigating(isNavigating) {
             if (isNavigating)
@@ -55038,7 +55045,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
     PuzzleComponent.ɵfac = function PuzzleComponent_Factory(t) { return new (t || PuzzleComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"])); };
     PuzzleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PuzzleComponent, selectors: [["x-puzzle"]], hostVars: 10, hostBindings: function PuzzleComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mouseover", function PuzzleComponent_mouseover_HostBindingHandler() { return ctx.mouseOver(); })("mouseout", function PuzzleComponent_mouseout_HostBindingHandler() { return ctx.mouseOut(); })("click", function PuzzleComponent_click_HostBindingHandler() { return ctx.click(); })("click", function PuzzleComponent_click_HostBindingHandler() { return ctx.clickDocument(); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"]);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mouseover", function PuzzleComponent_mouseover_HostBindingHandler($event) { return ctx.mouseOver($event); })("mouseout", function PuzzleComponent_mouseout_HostBindingHandler($event) { return ctx.mouseOut($event); });
             }
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](ctx.style);
