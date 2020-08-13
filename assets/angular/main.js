@@ -54459,7 +54459,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const _c0 = function (a0) { return { "left": a0 }; };
+const _c0 = ["content"];
+const _c1 = function (a0) { return { "left": a0 }; };
 let BookComponent = /*@__PURE__*/ (() => {
     class BookComponent {
         constructor(element) {
@@ -54499,12 +54500,20 @@ let BookComponent = /*@__PURE__*/ (() => {
             return Math.round(this.totalWidth / this.pageWidth);
         }
         refreshWidths() {
-            this.totalWidth = !!this.element ? this.element.nativeElement.scrollWidth * 1.02 : 0;
-            this.pageWidth = !!this.element ? this.element.nativeElement.getBoundingClientRect().width * 1.02 : 0;
+            this.totalWidth = !!this.element ? this.element.nativeElement.getBoundingClientRect().width : 0;
+            this.pageWidth = !!this.element ? this.contentElement.nativeElement.getBoundingClientRect().width : 0;
         }
     }
     BookComponent.ɵfac = function BookComponent_Factory(t) { return new (t || BookComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])); };
-    BookComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BookComponent, selectors: [["x-book"]], hostVars: 4, hostBindings: function BookComponent_HostBindings(rf, ctx) {
+    BookComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BookComponent, selectors: [["x-book"]], viewQuery: function BookComponent_Query(rf, ctx) {
+            if (rf & 1) {
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c0, true);
+            }
+            if (rf & 2) {
+                var _t;
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.contentElement = _t.first);
+            }
+        }, hostVars: 4, hostBindings: function BookComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("resize", function BookComponent_resize_HostBindingHandler() { return ctx.onResize(); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveWindow"]);
             }
@@ -54521,7 +54530,7 @@ let BookComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             }
             if (rf & 2) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](3, _c0, ctx.pageOffsetWithUnits));
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](3, _c1, ctx.pageOffsetWithUnits));
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("pageNumber", ctx.pageNumber)("numberOfPages", ctx.numberOfPages);
             }
