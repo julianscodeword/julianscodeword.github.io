@@ -54531,7 +54531,7 @@ let BookComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("pageNumber", ctx.pageNumber)("numberOfPages", ctx.numberOfPages);
             }
-        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  height: 100%;\n  overflow: hidden;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  column-count: 2;\n}\n@media (orientation: portrait) {\n  :host .binding {\n    column-count: 2;\n  }\n}"], encapsulation: 3 });
+        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  column-count: 2;\n  column-gap: 2%;\n}\n@media (orientation: portrait) {\n  :host .binding {\n    column-count: 1;\n  }\n}"], encapsulation: 3 });
     return BookComponent;
 })();
 
@@ -54912,7 +54912,12 @@ let LineComponent = /*@__PURE__*/ (() => {
         }
         mouseOver() { this.isActive = true; }
         mouseOut() { this.isActive = false; }
-        click() { this.isClicked = true; this.onClick.emit(this.outline.word.target); }
+        click() {
+            if (!this.isRevealed)
+                return;
+            this.isClicked = true;
+            this.onClick.emit(this.outline.word.target);
+        }
         durationFor(index) {
             return Math.random() * this.appearance.highlightDuration;
         }
@@ -55003,6 +55008,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
         constructor(sanitizer, renderer) {
             this.sanitizer = sanitizer;
             this.renderer = renderer;
+            this.hasFocus = false;
             this.isActive = false;
             this.isPuzzle = true;
             this.isFinished = false;
@@ -55010,6 +55016,8 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
         }
         mouseOver() { this.isActive = true; this.setNavigating(true); }
         mouseOut() { this.isActive = false; this.setNavigating(false); }
+        click() { this.hasFocus = true; }
+        clickDocument() { this.isActive = this.hasFocus; this.hasFocus = false; }
         get isIntrusive() { return this.appearance.isIntrusive; }
         setNavigating(isNavigating) {
             if (isNavigating)
@@ -55030,7 +55038,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
     PuzzleComponent.ɵfac = function PuzzleComponent_Factory(t) { return new (t || PuzzleComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"])); };
     PuzzleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PuzzleComponent, selectors: [["x-puzzle"]], hostVars: 10, hostBindings: function PuzzleComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mouseover", function PuzzleComponent_mouseover_HostBindingHandler() { return ctx.mouseOver(); })("mouseout", function PuzzleComponent_mouseout_HostBindingHandler() { return ctx.mouseOut(); });
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mouseover", function PuzzleComponent_mouseover_HostBindingHandler() { return ctx.mouseOver(); })("mouseout", function PuzzleComponent_mouseout_HostBindingHandler() { return ctx.mouseOut(); })("click", function PuzzleComponent_click_HostBindingHandler() { return ctx.click(); })("click", function PuzzleComponent_click_HostBindingHandler() { return ctx.clickDocument(); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"]);
             }
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](ctx.style);
