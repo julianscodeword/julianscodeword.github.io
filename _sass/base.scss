@@ -1,12 +1,15 @@
 .main {
     font-family: 'Zilla Slab';
     background-color: rgba(255, 255, 255, 0.7);
-    color: rgba(17, 50, 51, 1.0);
     padding: 3vmin;
     border-radius: 2px;
     font-size: var(--font);
     overflow: hidden;
     transition: 500ms opacity;
+}
+
+.main, .main a {
+    color: rgba(17, 50, 51, 1.0);
 }
 
 .aside {
