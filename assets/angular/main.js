@@ -55031,7 +55031,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
         --highlightDuration: ${this.appearance.highlightDuration}ms;
       `);
         }
-        wordClicked(target) { this.isFinished = this.appearance.isIntrusive; this.onWordClicked.emit(target); }
+        wordClicked(target) { return; this.isFinished = this.appearance.isIntrusive; this.onWordClicked.emit(target); }
     }
     PuzzleComponent.ɵfac = function PuzzleComponent_Factory(t) { return new (t || PuzzleComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"])); };
     PuzzleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PuzzleComponent, selectors: [["x-puzzle"]], hostVars: 10, hostBindings: function PuzzleComponent_HostBindings(rf, ctx) {
