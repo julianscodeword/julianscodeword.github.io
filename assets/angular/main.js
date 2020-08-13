@@ -54479,7 +54479,7 @@ let BookComponent = /*@__PURE__*/ (() => {
             this.refreshWidths();
             this.log();
         }
-        ngAfterViewInit() {
+        ngAfterViewChecked() {
             this.refreshWidths();
             this.log();
         }
