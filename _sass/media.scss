@@ -29,7 +29,7 @@
         margin: 0;
     }
     
-    .tltrbr {
+    .content {
         grid-template-areas:
             "U UR"
             "T T"
@@ -71,7 +71,7 @@
 }
 
 @media (max-width: 650px) and (orientation: portrait), (max-height: 650px) and (orientation: portrait) {
-    .tltrbr {
+    .content {
         grid-template-areas:
             "U U"
             "T T"

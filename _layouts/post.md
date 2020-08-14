@@ -1,6 +1,6 @@
 ---
 layout: default
-class: article
+class: content
 ---
 
 <x-book>
