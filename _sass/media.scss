@@ -25,10 +25,10 @@
     .tltrbr {
         grid-template-areas:
             "U UR"
-            "T"
-            "M"
-            "B";
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            "T T"
+            "M M"
+            "B B";
+        grid-template-columns: minmax(0, 1fr) max-content;
         grid-template-rows: max-content max-content minmax(0, 1fr) max-content;
 
         .header {
@@ -64,5 +64,13 @@
 }
 
 @media (max-width: 650px), (max-height: 650px) and (orientation: portrait) {
-    .tltrbr .header { grid-area: T; }
+    .tltrbr {
+        grid-template-areas:
+            "U U"
+            "T T"
+            "M M"
+            "B B";
+
+        .header { grid-area: T; }
+    }
 }
