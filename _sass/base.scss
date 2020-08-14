@@ -63,20 +63,22 @@ body.navigating .main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2vmin;
 
     .entry {
         display: block;
         font-size: 6vmin;
-        filter: saturate(0.2);
+        filter: saturate(0.2) opacity(0.5);
         transition: filter 500ms;
+        background-size: cover;
 
         &:hover { filter: unset; }
 
         .link {
-            background-size: cover;
             display: block;
-            padding: 7vmin;
-            background-color: rgba(0, 0, 0, 0.35);
+            margin: 4vmin;
+            padding: 4vmin;
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
         }
         .title, .description, .date { display: inline-block; }
