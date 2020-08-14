@@ -42,9 +42,11 @@ body {
     overflow: hidden;
 }
 
-body.navigating .main {
-    opacity: 0;
-    pointer-events: none;
+body.navigating {
+    .main, .header {
+        opacity: 0;
+        pointer-events: none;
+    }    
 }
 
 .social-links li {
