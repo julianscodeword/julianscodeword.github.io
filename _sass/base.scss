@@ -67,20 +67,20 @@ body.navigating .main {
     .entry {
         display: block;
         font-size: 3vmin;
-        filter: saturate(0.2) opacity(0.5);
-        transition: filter 500ms;
         background-size: cover;
         border-radius: 0.5vmin;
         margin: 1vmin;
 
-        &:hover { filter: unset; }
-
         .link {
             display: block;
-            margin: 4vmin;
-            padding: 4vmin;
+            margin: 2vmin;
+            padding: 2vmin;
             background-color: rgba(0, 0, 0, 0.7);
             color: white;
+            backdrop-filter: saturate(0.2) brightness(0.5);
+            transition: backdrop-filter 500ms;
+
+            &:hover { backdrop-filter: unset; }
         }
         .title, .description, .date { display: block; }
         .title { font-size: 100%; }
