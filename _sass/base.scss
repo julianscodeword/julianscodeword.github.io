@@ -24,6 +24,7 @@
 
 .header h1 {
     font-size: calc(2 * var(--font));
+    line-height: calc(2 * var(--font));
     color: white;
     font-family: 'Zilla Slab', sans-serif;
     font-weight: normal;
@@ -43,7 +44,7 @@ body {
 }
 
 body.navigating {
-    .main, .header {
+    .main {
         opacity: 0;
         pointer-events: none;
     }    
@@ -57,9 +58,9 @@ body.navigating {
 
 .social-links a {
     color: rgba(255, 255, 255, 0.8);
-    font-size: var(--font);
+    font-size: calc(1.5 * var(--font));
     display: inline-block;
-    height: calc(0.9 * var(--font));
+    height: calc(1.35 * var(--font));
     line-height: var(--font);
     transition: 500ms color;
 }

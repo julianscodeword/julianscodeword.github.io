@@ -5,6 +5,13 @@
 }
 
 @media (orientation: portrait) {
+    body.navigating {
+        .header {
+            opacity: 0;
+            pointer-events: none;
+        }    
+    }
+
     .social-links li {
         display: inline;
     }
