@@ -7,8 +7,8 @@ title: Journal
   {% for post in site.posts %}
     {% if post.categories contains "journal" %}
       <li>
-        <a href="/assets/img/thumbnails/{{ post.url }}">
-          <img src="{{ post.thumbnail }}" />
+        <a href="{{ post.url }}">
+          <img src="/assets/img/thumbnails/{{ post.thumbnail }}" />
           {{ post.title }}
         </a>
       </li>
