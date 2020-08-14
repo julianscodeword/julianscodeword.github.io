@@ -72,6 +72,10 @@ body.navigating .main {
         margin: 1vmin;
         padding: 1vmin;
         width: 33%;
+        filter: saturate(0.3);
+        transition: filter 500ms;
+
+        &:hover { filter: unset; }
 
         .link {
             display: block;
@@ -79,10 +83,6 @@ body.navigating .main {
             padding: 2vmin;
             background-color: rgba(255, 255, 255, 0.7);
             color: black;
-            filter: saturate(0);
-            transition: backdrop-filter 500ms;
-
-            &:hover { backdrop-filter: unset; }
         }
         .title, .description, .date { display: block; }
         .title { font-size: 100%; }
