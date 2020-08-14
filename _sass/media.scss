@@ -4,13 +4,15 @@
     :root { --font: 4vmin; }
 }
 
+@media (max-width: 650px), (max-height: 650px) and (orientation: portrait) {
+    .header { grid-area: T; }
+}
+
 @media (orientation: portrait) {
     .social-links li {
         display: inline;
     }
-}
 
-@media (orientation: portrait) {
     body {
         align-items: flex-start;
         justify-content: center;
@@ -39,7 +41,7 @@
         }
 
         .aside {
-            grid-area: T;
+            grid-area: U;
             height: unset;
             width: 100%;
         }
