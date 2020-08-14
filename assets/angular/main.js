@@ -54910,8 +54910,8 @@ let LineComponent = /*@__PURE__*/ (() => {
             this.isFinished = false;
             this.onClick = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
-        mouseOver() { event.stopPropagation(); this.isActive = true; }
-        mouseOut() { event.stopPropagation(); this.isActive = false; }
+        mouseOver() { this.isActive = true; }
+        mouseOut() { this.isActive = false; }
         click() {
             event.stopPropagation();
             this.isClicked = true;
@@ -55007,7 +55007,6 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
         constructor(sanitizer, renderer) {
             this.sanitizer = sanitizer;
             this.renderer = renderer;
-            this.isAbleToHover = false;
             this.isActive = false;
             this.isPuzzle = true;
             this.isFinished = false;
