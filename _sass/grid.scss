@@ -1,3 +1,10 @@
+.landing {
+    display: flex;
+    width: 100vw;
+    height: var(--vh);
+    max-height: var(--vh);
+}
+
 .content {
     display: grid;
     height: var(--vh);
