@@ -44,11 +44,17 @@
 
     .tltrbr {
         grid-template-areas:
+            "U"
             "T"
             "M"
             "B";
         grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: max-content minmax(0, 1fr) max-content;
+        grid-template-rows: max-content max-content minmax(0, 1fr) max-content;
+
+        .header {
+            grid-area: U;
+            width: 100%;
+        }
 
         .aside {
             grid-area: T;
