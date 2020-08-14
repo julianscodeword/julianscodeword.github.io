@@ -3,4 +3,10 @@ layout: default
 title: Guides
 ---
 
-<h1>Guides</h1>
+<ul>
+  {% for post in site.posts %}
+    {% if post.categories contains "guides" %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>

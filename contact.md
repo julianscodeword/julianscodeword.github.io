@@ -3,4 +3,4 @@ layout: default
 title: Contact
 ---
 
-<h1>Contact</h1>
+How to contact me.

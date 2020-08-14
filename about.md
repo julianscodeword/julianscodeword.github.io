@@ -3,4 +3,4 @@ layout: default
 title: About
 ---
 
-<h1>About</h1>
+Some stuff about me.

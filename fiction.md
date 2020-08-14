@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Home
+title: Fiction
 ---
-
-<h1>Journal</h1>
 
 <ul>
   {% for post in site.posts %}

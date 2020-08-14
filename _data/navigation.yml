@@ -1,9 +1,0 @@
-- link: a
-  prefix: a
-  pivot: b
-  suffix: c
-
-- link: b
-  prefix: d
-  pivot: e
-  suffix: f
