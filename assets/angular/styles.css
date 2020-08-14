@@ -2,7 +2,7 @@
   --gutter: 2;
   --maxMargin: 2px;
   --scale: 33vmin;
-  --max: 80;
+  --max: 75;
   --borderRadius: 2px;
   --font: 2.5vmin;
 }
@@ -12,5 +12,11 @@
     --gutter: 1;
     --scale: calc(var(--max) * 1vmin);
     --font: 4vmin;
+  }
+}
+
+@media (orientation: portrait) {
+  :root {
+    --max: 100;
   }
 }
