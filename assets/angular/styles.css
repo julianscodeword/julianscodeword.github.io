@@ -4,7 +4,7 @@
   --extra: 3;
   --maxMargin: 2px;
   --scale: 33vmin;
-  --max: 95;
+  --max: 88;
   --maxScale: calc(var(--max) * 1vmax);
   --borderRadius: 2px;
   --font: 2.5vmin;
