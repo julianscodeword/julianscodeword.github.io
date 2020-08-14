@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: base
 class: content
 ---
 
