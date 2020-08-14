@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "Let Sleeping Dogs Die"
-date:   2020-08-14 02:36:00 +1100
+thumbnail: "greece.jpg"
+description: "A man returns to the place he was born."
 ---
 
-# Here's one of my stories.
+Here's one of my stories.

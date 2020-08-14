@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Baking Sourdough"
 thumbnail: "sourdough.jpg"
 description: "Tips on baking sourdough bread."
