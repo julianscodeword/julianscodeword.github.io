@@ -52,10 +52,10 @@ body.navigating .main {
 
 .social-links a {
     color: rgba(255, 255, 255, 0.8);
-    font-size: var(--unit);
+    font-size: var(--font);
     display: inline-block;
-    height: calc(0.9 * var(--unit));
-    line-height: var(--unit);
+    height: calc(0.9 * var(--font));
+    line-height: var(--font);
     transition: 500ms color;
 }
 

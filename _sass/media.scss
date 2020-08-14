@@ -1,29 +1,7 @@
-:root {
-    --columns: 12;
-    --gutter: 2;
-    --rows: 6;
-    --extra: 3;
-    --scale: 33vmin;
-    --max: 88;
-    --font: 2.5vmin;
-    --maxScale: calc(var(--max) * 1vmax);
-    --m: calc(var(--columns) + 2 * var(--gutter));
-    --n: var(--rows);
-    --ratio: calc(var(--m) / var(--n));
-    --flippedRatio: calc(1 / var(--ratio));
-    --xScale: min(var(--scale), calc(var(--maxScale) * var(--flippedRatio)));
-    --effectiveN: calc(var(--rows) + var(--extra));
-    --unit: calc(var(--xScale) / var(--n));
-}
+:root { --font: 2.5vmin; }
 
 @media (max-width: 650px), (max-height: 650px) {
-    :root {
-        --gutter: 1;
-        --scale: calc(var(--max) * 1vmin);
-        --font: 4vmin;
-        --effectiveN: calc(var(--rows) + var(--extra));
-        --unit: calc(var(--xScale) / var(--effectiveN));
-    }
+    :root { --font: 4vmin; }
 }
 
 @media (orientation: portrait) {
