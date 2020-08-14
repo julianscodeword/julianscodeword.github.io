@@ -9,7 +9,7 @@ title: Journal
       <section class="entry">
         <a href="{{ post.url }}" style="background-image: url('/assets/img/thumbnails/{{ post.thumbnail }}')" >
           <span class="title">{{ post.title }}</span>
-          <span class="excerpt">{{ post.excerpt }}</span>
+          <span class="excerpt">{{ post.description }}</span>
         </a>
       </section>
     {% endif %}
