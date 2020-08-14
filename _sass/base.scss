@@ -60,17 +60,18 @@ body.navigating .main {
 
 // Post Entries
 .entries {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 2vmin;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 
     .entry {
         display: block;
-        font-size: 6vmin;
+        font-size: 3vmin;
         filter: saturate(0.2) opacity(0.5);
         transition: filter 500ms;
         background-size: cover;
+        border-radius: 0.5vmin;
+        margin: 1vmin;
 
         &:hover { filter: unset; }
 
