@@ -2,6 +2,7 @@
 layout: post
 title:  "Another post"
 date:   2020-08-06 02:47:00 +1100
+thumbnail: "/img/thumbnails/sourdough.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia non sem vitae pellentesque. Nulla cursus quis lectus in dictum. Donec vel blandit ipsum. Cras lacus dui, ultrices eu risus ut, tincidunt tincidunt erat. Vestibulum iaculis feugiat ligula, ac mattis nulla lacinia vitae. Curabitur non ante ut enim tristique interdum id bibendum sapien. Quisque tincidunt ex eget commodo sagittis. Ut finibus nunc nec ante sodales faucibus. Sed nec sagittis metus. Nunc imperdiet bibendum risus, eu scelerisque quam tincidunt vel.
