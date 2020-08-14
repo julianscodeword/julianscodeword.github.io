@@ -18,9 +18,12 @@
     color: white;
 }
 
-.header h1 {
+.header {
     margin: 0 0 0 2vmin;
-    font-size: 5vmin;
+}
+
+.header h1 {
+    font-size: (--font);
     color: white;
     font-family: 'Zilla Slab', sans-serif;
     font-weight: normal;

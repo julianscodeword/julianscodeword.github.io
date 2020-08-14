@@ -20,6 +20,10 @@
         font-size: var(--font);
     }
 
+    .header {
+        margin: 0;
+    }
+    
     .tltrbr {
         grid-template-areas:
             "U"
@@ -49,7 +53,8 @@
         .footer {
             grid-area: B;
             width: calc(100% - 2vmin);
-        }        
+            margin: 0;
+        }
     }
 
     .tmb {
