@@ -3,15 +3,15 @@ layout: default
 title: Journal
 ---
 
-<ul>
+<section class="entries">
   {% for post in site.posts %}
     {% if post.categories contains "journal" %}
-      <li>
-        <a href="{{ post.url }}">
-          <img src="/assets/img/thumbnails/{{ post.thumbnail }}" />
-          {{ post.title }}
+      <section class="entry">
+        <a href="{{ post.url }}" style="background-image: url('/assets/img/thumbnails/{{ post.thumbnail }}')" >
+          <span class="title">{{ post.title }}</span>
+          <span class="excerpt">{{ post.excerpt }}</span>
         </a>
-      </li>
+      </section>
     {% endif %}
   {% endfor %}
-</ul>
+</section>
