@@ -69,6 +69,7 @@ body.navigating .main {
         font-size: 6vmin;
         filter: saturate(0.2);
         transition: filter 500ms;
+        background-size: cover;
 
         &:hover { filter: unset; }
 
@@ -78,7 +79,6 @@ body.navigating .main {
             background-color: rgba(0, 0, 0, 0.35);
             color: white;
         }
-        .title {}
-        .description {}
+        .title, .description { display: inline-block; }
     }
 }
