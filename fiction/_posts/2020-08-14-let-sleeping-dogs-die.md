@@ -1,5 +1,5 @@
 ---
-layout: fiction
+layout: post
 title:  "Let Sleeping Dogs Die"
 date:   2020-08-14 02:36:00 +1100
 ---
