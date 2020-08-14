@@ -55046,6 +55046,18 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
         --revealDuration: ${this.appearance.revealDuration}ms;
         --highlightDuration: ${this.appearance.highlightDuration}ms;
         --offsetBase: ${this.offset};
+
+        --maxScale: calc(var(--max) * 1vmax);
+        --offsetWithGutter: calc(var(--offsetBase) + var(--gutter));
+        --m: calc(var(--columns) + 2 * var(--gutter));
+        --n: var(--rows);
+        --ratio: calc(var(--m) / var(--n));
+        --flippedRatio: calc(1 / var(--ratio));
+        --margin: min(0.5vmin, var(--maxMargin));
+        --xScale: min(var(--scale), calc(var(--maxScale) * var(--flippedRatio)));
+        --yScale: min(calc(var(--scale) * var(--ratio)), var(--maxScale));
+        --unit: calc(var(--xScale) / var(--n));
+        --offset: calc(-1 * var(--unit) * var(--offsetWithGutter));    
       `);
         }
         wordClicked(target) {
