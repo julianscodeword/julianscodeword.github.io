@@ -54912,7 +54912,7 @@ let LineComponent = /*@__PURE__*/ (() => {
             this.onClick = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
         mouseOver() { console.log("MOUSE OVER LINE", this.isActive, this.isRevealed); this.isActive = this.isRevealed; }
-        mouseOut() { this.isActive = false; }
+        mouseOut() { console.log("MOUSE OUT LINE", this.isActive, this.isRevealed); this.isActive = false; }
         click() {
             event.stopPropagation();
             this.isClicked = true;
@@ -55022,6 +55022,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
             this.setActive(true);
         }
         mouseOut() {
+            console.log("MOUSE OUT PUZZLE", this.isTouching, this.isActive);
             if (this.isTouching)
                 return;
             this.setActive(false);
