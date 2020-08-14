@@ -55007,13 +55007,25 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
         constructor(sanitizer, renderer) {
             this.sanitizer = sanitizer;
             this.renderer = renderer;
+            this.isTouching = false;
             this.isActive = false;
             this.isPuzzle = true;
             this.isFinished = false;
             this.onWordClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
-        mouseOver() { this.isActive = true; this.setNavigating(true); }
-        mouseOut() { this.isActive = false; this.setNavigating(false); }
+        touchStart() { this.isTouching = true; }
+        mouseOver() {
+            if (this.isTouching)
+                return;
+            this.isActive = true;
+            this.setNavigating(true);
+        }
+        mouseOut() {
+            if (this.isTouching)
+                return;
+            this.isActive = false;
+            this.setNavigating(false);
+        }
         get isIntrusive() { return this.appearance.isIntrusive; }
         setNavigating(isNavigating) {
             if (isNavigating)
@@ -55034,18 +55046,20 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
                 this.isFinished = this.appearance.isIntrusive;
                 this.onWordClicked.emit(target);
             }
+            this.isActive = true;
+            this.isTouching = false;
         }
     }
     PuzzleComponent.ɵfac = function PuzzleComponent_Factory(t) { return new (t || PuzzleComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"])); };
-    PuzzleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PuzzleComponent, selectors: [["x-puzzle"]], hostVars: 10, hostBindings: function PuzzleComponent_HostBindings(rf, ctx) {
+    PuzzleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PuzzleComponent, selectors: [["x-puzzle"]], hostVars: 12, hostBindings: function PuzzleComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mouseover", function PuzzleComponent_mouseover_HostBindingHandler() { return ctx.mouseOver(); })("mouseout", function PuzzleComponent_mouseout_HostBindingHandler() { return ctx.mouseOut(); });
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchstart", function PuzzleComponent_touchstart_HostBindingHandler() { return ctx.touchStart(); })("mouseover", function PuzzleComponent_mouseover_HostBindingHandler() { return ctx.mouseOver(); })("mouseout", function PuzzleComponent_mouseout_HostBindingHandler() { return ctx.mouseOut(); });
             }
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](ctx.style);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("active", ctx.isActive)("puzzle", ctx.isPuzzle)("intrusive", ctx.isIntrusive)("finished", ctx.isFinished);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("touching", ctx.isTouching)("active", ctx.isActive)("puzzle", ctx.isPuzzle)("intrusive", ctx.isIntrusive)("finished", ctx.isFinished);
             }
-        }, inputs: { isActive: "isActive", outline: "outline", appearance: "appearance" }, outputs: { onWordClicked: "onWordClicked" }, decls: 2, vars: 1, consts: [[1, "wrapper"], [3, "ngClass", "index", "outline", "isRevealed", "isFinished", "appearance", "onClick", 4, "ngFor", "ngForOf"], [3, "ngClass", "index", "outline", "isRevealed", "isFinished", "appearance", "onClick"]], template: function PuzzleComponent_Template(rf, ctx) {
+        }, inputs: { isTouching: "isTouching", isActive: "isActive", outline: "outline", appearance: "appearance" }, outputs: { onWordClicked: "onWordClicked" }, decls: 2, vars: 1, consts: [[1, "wrapper"], [3, "ngClass", "index", "outline", "isRevealed", "isFinished", "appearance", "onClick", 4, "ngFor", "ngForOf"], [3, "ngClass", "index", "outline", "isRevealed", "isFinished", "appearance", "onClick"]], template: function PuzzleComponent_Template(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, PuzzleComponent_x_line_1_Template, 1, 6, "x-line", 1);
