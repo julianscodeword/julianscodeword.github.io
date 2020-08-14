@@ -4,14 +4,19 @@
     max-height: var(--vh);
     width: 100vw;
     grid-template-columns: max-content minmax(0, 1fr);
-    grid-template-rows: 1fr max-content;
+    grid-template-rows: max-content 1fr max-content;
     grid-template-areas:
+        "UL UR"
         "TL TR"
         "BL BR";
     grid-auto-flow: row;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 4vmin;
+
+    .header {
+        grid-area: UR;
+    }
 
     .aside {
         grid-area: TL;
