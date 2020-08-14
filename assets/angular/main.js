@@ -54911,14 +54911,17 @@ let LineComponent = /*@__PURE__*/ (() => {
             this.onClick = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
         touchStart() {
+            event.stopPropagation();
             console.log("TOUCH STARTED ON LINE");
         }
         touchStop() {
+            event.stopPropagation();
             console.log("TOUCH FINISHED ON LINE");
         }
-        mouseOver() { console.log("MOUSE OVER LINE"); this.isActive = true; }
-        mouseOut() { console.log("MOUSE OUT OF LINE"); this.isActive = false; }
+        mouseOver() { event.stopPropagation(); console.log("MOUSE OVER LINE"); this.isActive = true; }
+        mouseOut() { event.stopPropagation(); console.log("MOUSE OUT OF LINE"); this.isActive = false; }
         click() {
+            event.stopPropagation();
             console.log("CLICK ON LINE");
             //   if (!this.isRevealed)
             //     return;
@@ -54954,7 +54957,7 @@ let LineComponent = /*@__PURE__*/ (() => {
     LineComponent.ɵfac = function LineComponent_Factory(t) { return new (t || LineComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"])); };
     LineComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LineComponent, selectors: [["x-line"]], hostVars: 12, hostBindings: function LineComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchstart", function LineComponent_touchstart_HostBindingHandler() { return ctx.touchStart(); })("touchend", function LineComponent_touchend_HostBindingHandler() { return ctx.touchStop(); })("mouseover", function LineComponent_mouseover_HostBindingHandler() { return ctx.mouseOver(); })("mouseout", function LineComponent_mouseout_HostBindingHandler() { return ctx.mouseOut(); })("click", function LineComponent_click_HostBindingHandler() { return ctx.click(); });
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchstart", function LineComponent_touchstart_HostBindingHandler($event) { return ctx.touchStart($event); })("touchend", function LineComponent_touchend_HostBindingHandler($event) { return ctx.touchStop($event); })("mouseover", function LineComponent_mouseover_HostBindingHandler($event) { return ctx.mouseOver($event); })("mouseout", function LineComponent_mouseout_HostBindingHandler($event) { return ctx.mouseOut($event); })("click", function LineComponent_click_HostBindingHandler($event) { return ctx.click($event); });
             }
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](ctx.style);
