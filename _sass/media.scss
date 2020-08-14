@@ -70,7 +70,7 @@
     }
 }
 
-@media (max-width: 650px), (max-height: 650px) and (orientation: portrait) {
+@media (max-width: 650px) and (orientation: portrait), (max-height: 650px) and (orientation: portrait) {
     .tltrbr {
         grid-template-areas:
             "U U"
