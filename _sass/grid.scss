@@ -4,7 +4,7 @@
     max-height: var(--vh);
     width: 100vw;
     grid-template-columns: max-content minmax(0, 1fr);
-    grid-template-rows: minmax(0, 1fr) max-content;
+    grid-template-rows: 1fr max-content;
     grid-template-areas:
         "TL TR"
         "BL BR";
