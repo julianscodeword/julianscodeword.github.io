@@ -55017,18 +55017,17 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
         mouseOver() {
             if (this.isTouching)
                 return;
-            this.isActive = true;
-            this.setNavigating(true);
+            this.setActive(true);
         }
         mouseOut() {
             if (this.isTouching)
                 return;
-            this.isActive = false;
-            this.setNavigating(false);
+            this.setActive(false);
         }
         get isIntrusive() { return this.appearance.isIntrusive; }
-        setNavigating(isNavigating) {
-            if (isNavigating)
+        setActive(isActive) {
+            this.isActive = isActive;
+            if (isActive)
                 this.renderer.addClass(document.body, 'navigating');
             else
                 this.renderer.removeClass(document.body, 'navigating');
@@ -55046,7 +55045,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
                 this.isFinished = this.appearance.isIntrusive;
                 this.onWordClicked.emit(target);
             }
-            this.isActive = true;
+            this.setActive(true);
             this.isTouching = false;
         }
     }
