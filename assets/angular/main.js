@@ -55029,6 +55029,9 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
                 this.setActive(false);
         }
         get isIntrusive() { return this.appearance.isIntrusive; }
+        get offset() {
+            return this.outline.leftSpan;
+        }
         setActive(isActive) {
             this.isActive = isActive;
             if (isActive)
@@ -55042,6 +55045,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
         --rows: ${this.outline.dimensions.height};
         --revealDuration: ${this.appearance.revealDuration}ms;
         --highlightDuration: ${this.appearance.highlightDuration}ms;
+        --offsetBase: ${this.offset};
       `);
         }
         wordClicked(target) {
