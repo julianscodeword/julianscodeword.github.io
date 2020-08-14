@@ -79,6 +79,9 @@ body.navigating .main {
             background-color: rgba(0, 0, 0, 0.35);
             color: white;
         }
-        .title, .description { display: inline-block; }
+        .title, .description, .date { display: inline-block; }
+        .title { font-size: 100%; }
+        .description, .date { font-size: 60%; }
+        .date { font-weight: bold; }
     }
 }

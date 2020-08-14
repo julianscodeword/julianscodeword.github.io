@@ -10,6 +10,7 @@ title: Journal
         <a class="link" href="{{ post.url }}" style="background-image: url('/assets/img/thumbnails/{{ post.thumbnail }}')" >
           <span class="title">{{ post.title }}</span>
           <span class="description">{{ post.description }}</span>
+          <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
         </a>
       </section>
     {% endif %}
