@@ -62,7 +62,7 @@ body.navigating .main {
 .entries {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
 
     .entry {
         display: block;
@@ -70,6 +70,8 @@ body.navigating .main {
         background-size: cover;
         border-radius: 0.5vmin;
         margin: 1vmin;
+        padding: 1vmin;
+        width: 33%;
 
         .link {
             display: block;
