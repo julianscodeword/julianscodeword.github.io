@@ -54911,7 +54911,7 @@ let LineComponent = /*@__PURE__*/ (() => {
             this.isFinished = false;
             this.onClick = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
-        mouseOver() { this.isActive = this.isRevealed; }
+        mouseOver() { console.log("MOUSE OVER LINE", this.isActive, this.isRevealed); this.isActive = this.isRevealed; }
         mouseOut() { this.isActive = false; }
         click() {
             event.stopPropagation();
@@ -55016,6 +55016,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
         }
         touchStart() { this.isTouching = true; }
         mouseOver() {
+            console.log("MOUSE OVER PUZZLE", this.isTouching, this.isActive);
             if (this.isTouching)
                 return;
             this.setActive(true);
