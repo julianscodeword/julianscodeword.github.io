@@ -69,11 +69,11 @@ body.navigating .main {
         font-size: 6vmin;
         filter: saturate(0.2);
         transition: filter 500ms;
-        background-size: cover;
 
         &:hover { filter: unset; }
 
         .link {
+            background-size: cover;
             display: block;
             padding: 7vmin;
             background-color: rgba(0, 0, 0, 0.35);
