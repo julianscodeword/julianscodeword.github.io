@@ -54903,6 +54903,7 @@ let LineComponent = /*@__PURE__*/ (() => {
     class LineComponent {
         constructor(sanitizer) {
             this.sanitizer = sanitizer;
+            this.isTouching = false;
             this.isActive = false;
             this.isLine = true;
             this.isRevealed = false;
@@ -54910,12 +54911,14 @@ let LineComponent = /*@__PURE__*/ (() => {
             this.isFinished = false;
             this.onClick = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
-        mouseOver() { this.isActive = true; }
+        touchStart() { this.isTouching = true; }
+        mouseOver() { this.isActive = !this.isTouching; }
         mouseOut() { this.isActive = false; }
         click() {
             event.stopPropagation();
             this.isClicked = true;
             this.onClick.emit(this.outline.word.target);
+            this.isTouching = false;
         }
         durationFor(index) {
             return Math.random() * this.appearance.highlightDuration;
@@ -54944,15 +54947,15 @@ let LineComponent = /*@__PURE__*/ (() => {
         }
     }
     LineComponent.ɵfac = function LineComponent_Factory(t) { return new (t || LineComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"])); };
-    LineComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LineComponent, selectors: [["x-line"]], hostVars: 12, hostBindings: function LineComponent_HostBindings(rf, ctx) {
+    LineComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LineComponent, selectors: [["x-line"]], hostVars: 14, hostBindings: function LineComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mouseover", function LineComponent_mouseover_HostBindingHandler($event) { return ctx.mouseOver($event); })("mouseout", function LineComponent_mouseout_HostBindingHandler($event) { return ctx.mouseOut($event); })("click", function LineComponent_click_HostBindingHandler($event) { return ctx.click($event); });
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchstart", function LineComponent_touchstart_HostBindingHandler() { return ctx.touchStart(); })("mouseover", function LineComponent_mouseover_HostBindingHandler($event) { return ctx.mouseOver($event); })("mouseout", function LineComponent_mouseout_HostBindingHandler($event) { return ctx.mouseOut($event); })("click", function LineComponent_click_HostBindingHandler($event) { return ctx.click($event); });
             }
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](ctx.style);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("active", ctx.isActive)("line", ctx.isLine)("revealed", ctx.isRevealed)("clicked", ctx.isClicked)("finished", ctx.isFinished);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("touching", ctx.isTouching)("active", ctx.isActive)("line", ctx.isLine)("revealed", ctx.isRevealed)("clicked", ctx.isClicked)("finished", ctx.isFinished);
             }
-        }, inputs: { isActive: "isActive", isRevealed: "isRevealed", isFinished: "isFinished", outline: "outline", appearance: "appearance", index: "index" }, outputs: { onClick: "onClick" }, decls: 3, vars: 1, consts: [[1, "block", "nonpivot", "space", "prefix"], ["class", "block letter", 3, "ngStyle", "pivot", "nonpivot", "arm", 4, "ngFor", "ngForOf"], [1, "block", "nonpivot", "space", "suffix"], [1, "block", "letter", 3, "ngStyle"]], template: function LineComponent_Template(rf, ctx) {
+        }, inputs: { isTouching: "isTouching", isActive: "isActive", isRevealed: "isRevealed", isFinished: "isFinished", outline: "outline", appearance: "appearance", index: "index" }, outputs: { onClick: "onClick" }, decls: 3, vars: 1, consts: [[1, "block", "nonpivot", "space", "prefix"], ["class", "block letter", 3, "ngStyle", "pivot", "nonpivot", "arm", 4, "ngFor", "ngForOf"], [1, "block", "nonpivot", "space", "suffix"], [1, "block", "letter", 3, "ngStyle"]], template: function LineComponent_Template(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "span", 0);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, LineComponent_span_1_Template, 2, 8, "span", 1);
