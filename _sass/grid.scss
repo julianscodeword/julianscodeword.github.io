@@ -51,3 +51,13 @@
     .top { grid-area: T; }
     .bottom { grid-area: B; }
 }
+
+.lr {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: 1fr;
+    width: 100%;
+
+    .left { grid-area: L; }
+    .right { grid-area: R; }
+}
