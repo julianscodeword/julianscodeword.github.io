@@ -54,9 +54,9 @@
 
 .lr {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: max-content 1fr max-content;
     grid-template-rows: 1fr;
-    grid-template-areas: "L R";
+    grid-template-areas: "L M R";
     width: 100%;
 
     .left { grid-area: L; }

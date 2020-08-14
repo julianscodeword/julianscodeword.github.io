@@ -4,10 +4,6 @@
     :root { --font: 4vmin; }
 }
 
-@media (max-width: 650px), (max-height: 650px) and (orientation: portrait) {
-    .header { grid-area: T; }
-}
-
 @media (orientation: portrait) {
     .social-links li {
         display: inline;
@@ -65,4 +61,8 @@
         grid-template-rows: minmax(0, 1fr);
         height: unset;
     }
+}
+
+@media (max-width: 650px), (max-height: 650px) and (orientation: portrait) {
+    .header { grid-area: T; }
 }

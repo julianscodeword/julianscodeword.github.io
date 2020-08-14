@@ -23,7 +23,7 @@
 }
 
 .header h1 {
-    font-size: (--font);
+    font-size: calc(2 * var(--font));
     color: white;
     font-family: 'Zilla Slab', sans-serif;
     font-weight: normal;
