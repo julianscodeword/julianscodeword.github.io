@@ -54910,14 +54910,20 @@ let LineComponent = /*@__PURE__*/ (() => {
             this.isFinished = false;
             this.onClick = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
+        touchStart() {
+            console.log("TOUCH STARTED ON LINE");
+        }
+        touchStop() {
+            console.log("TOUCH FINISHED ON LINE");
+        }
         mouseOver() { console.log("MOUSE OVER LINE"); this.isActive = true; }
         mouseOut() { console.log("MOUSE OUT OF LINE"); this.isActive = false; }
         click() {
             console.log("CLICK ON LINE");
-            if (!this.isRevealed)
-                return;
-            this.isClicked = true;
-            this.onClick.emit(this.outline.word.target);
+            //   if (!this.isRevealed)
+            //     return;
+            //   this.isClicked = true;
+            //   this.onClick.emit(this.outline.word.target);
         }
         durationFor(index) {
             return Math.random() * this.appearance.highlightDuration;
@@ -54948,7 +54954,7 @@ let LineComponent = /*@__PURE__*/ (() => {
     LineComponent.ɵfac = function LineComponent_Factory(t) { return new (t || LineComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"])); };
     LineComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LineComponent, selectors: [["x-line"]], hostVars: 12, hostBindings: function LineComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mouseover", function LineComponent_mouseover_HostBindingHandler() { return ctx.mouseOver(); })("mouseout", function LineComponent_mouseout_HostBindingHandler() { return ctx.mouseOut(); })("click", function LineComponent_click_HostBindingHandler() { return ctx.click(); });
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchstart", function LineComponent_touchstart_HostBindingHandler() { return ctx.touchStart(); })("touchstop", function LineComponent_touchstop_HostBindingHandler() { return ctx.touchStop(); })("mouseover", function LineComponent_mouseover_HostBindingHandler() { return ctx.mouseOver(); })("mouseout", function LineComponent_mouseout_HostBindingHandler() { return ctx.mouseOut(); })("click", function LineComponent_click_HostBindingHandler() { return ctx.click(); });
             }
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](ctx.style);
@@ -55022,8 +55028,12 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
         }
         touchStart() {
             console.log("TOUCH STARTED ON PUZZLE");
-            if (!this.isAbleToHover)
-                this.isActive = true;
+        }
+        touchStop() {
+            console.log("TOUCH FINISHED ON PUZZLE");
+        }
+        click() {
+            console.log("CLICK ON PUZZLE");
         }
         mouseOver() { console.log("MOUSE OVER PUZZLE"); this.isActive = true; this.setNavigating(true); }
         mouseOut() { console.log("MOUSE OUT OF PUZZLE"); this.isActive = false; this.setNavigating(false); }
@@ -55047,7 +55057,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
     PuzzleComponent.ɵfac = function PuzzleComponent_Factory(t) { return new (t || PuzzleComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"])); };
     PuzzleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PuzzleComponent, selectors: [["x-puzzle"]], hostVars: 10, hostBindings: function PuzzleComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchstart", function PuzzleComponent_touchstart_HostBindingHandler() { return ctx.touchStart(); })("mouseover", function PuzzleComponent_mouseover_HostBindingHandler() { return ctx.mouseOver(); })("mouseout", function PuzzleComponent_mouseout_HostBindingHandler() { return ctx.mouseOut(); });
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchstart", function PuzzleComponent_touchstart_HostBindingHandler() { return ctx.touchStart(); })("touchstop", function PuzzleComponent_touchstop_HostBindingHandler() { return ctx.touchStop(); })("click", function PuzzleComponent_click_HostBindingHandler() { return ctx.click(); })("mouseover", function PuzzleComponent_mouseover_HostBindingHandler() { return ctx.mouseOver(); })("mouseout", function PuzzleComponent_mouseout_HostBindingHandler() { return ctx.mouseOut(); });
             }
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](ctx.style);
