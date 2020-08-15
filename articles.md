@@ -4,4 +4,4 @@ title: Articles
 category: articles
 ---
 
-{{ content }}
+Coming Soon!
