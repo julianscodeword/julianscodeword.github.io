@@ -7,6 +7,8 @@ title: About
 
 ![me](/assets/img/avatar.jpg)
 
+A good writer is a bit like Leonardo Dicaprio... No? Think of the movie Inception: a team of people enter someone's subconscious in order to plant an idea. What a great idea! Okay, back to reality; even though our target's are wide awake, our mission's still the same—we want them to forget the paper, but remember the idea.
+
 I've been writing and reviewing documents in a professional environment for over ten years. Having worked as a Data Engineer at both online businesses and consulting companies in industries as diverse as finance and smart lighting. I am comfortable communicating ideas in a way that makes sense to readers, even when they don't speak technobabble.
 
 ![metoo](/assets/img/avatar2.jpg)
