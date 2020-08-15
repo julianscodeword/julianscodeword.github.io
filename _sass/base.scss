@@ -113,3 +113,20 @@ body.navigating {
     column-gap: 2vmin;
     height: 100%;
 }
+
+blockquote {
+    background-color: #113233;
+    padding: 2vmin;
+    border-radius: 3px;
+    display: block;
+    color: white;
+    text-align: center;
+    line-height: calc(1.5 * var(--font));
+    font-size: calc(1.5 * var(--font));
+    margin: 2vmin;
+    font-style: italic;
+
+    p {
+        margin: 0;
+    }
+}
