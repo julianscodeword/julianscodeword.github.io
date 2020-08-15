@@ -54637,7 +54637,7 @@ class JulianComponent {
 let IntrusiveJulianComponent = /*@__PURE__*/ (() => {
     class IntrusiveJulianComponent extends JulianComponent {
         constructor() {
-            super(new _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["PuzzleAppearance"](true, 100, 100, true, true, _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["Palette"].neon));
+            super(new _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["PuzzleAppearance"](true, 500, 250, true, true, _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["Palette"].neon));
         }
     }
     IntrusiveJulianComponent.ɵfac = function IntrusiveJulianComponent_Factory(t) { return new (t || IntrusiveJulianComponent)(); };
@@ -54923,11 +54923,8 @@ let LineComponent = /*@__PURE__*/ (() => {
             this.onClick.emit(this.outline.word.target);
             this.isTouching = false;
         }
-        durationFor(index) {
-            return Math.random() * this.appearance.highlightDuration;
-        }
         stylesFor(index) {
-            const randomDuration = this.durationFor(index);
+            const randomDuration = Math.random() * this.appearance.highlightDuration;
             const duration = this.appearance.isIntrusive ? randomDuration : this.appearance.highlightDuration;
             const delay = this.appearance.isIntrusive ? randomDuration : 0;
             return {
