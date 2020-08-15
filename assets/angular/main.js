@@ -54941,9 +54941,9 @@ let LineComponent = /*@__PURE__*/ (() => {
       --prefixsize: ${this.outline.indent};
       --suffixsize: ${this.outline.outdent};
       --wordIndex: ${this.index};
-      --nascentRed: ${this.appearance.nascentColour.red},
-      --nascentGreen: ${this.appearance.nascentColour.green},
-      --nascentBlue: ${this.appearance.nascentColour.blue},
+      --nascentRed: ${this.appearance.nascentColour.red};
+      --nascentGreen: ${this.appearance.nascentColour.green};
+      --nascentBlue: ${this.appearance.nascentColour.blue};
       --red: ${palette.red};
       --green: ${palette.green};
       --blue: ${palette.blue};
