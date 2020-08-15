@@ -25,6 +25,11 @@
         justify-content: center;
     }
 
+    .aside {
+        width: unset;
+        height: var(--unit);
+    }
+
     .header {
         margin: 0;
     }
