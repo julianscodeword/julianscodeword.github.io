@@ -1,0 +1,14 @@
+button, input, optgroup, select, textarea {
+    border: none;
+    padding: 2vmin;
+    margin: 0 0 1vmin 0;
+    width: 50%;
+}
+
+button, input, optgroup, select {
+    height: 3vmin;
+}
+
+textarea {
+    height: 7vmin;
+}
