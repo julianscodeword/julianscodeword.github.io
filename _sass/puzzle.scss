@@ -3,7 +3,7 @@
     --max: 75;
     --maxScale: calc(var(--max) * 1vmax);
     --gutter: 2;
-    --unit: min(--scale, --maxScale * 3 / (6 + --gutter)) / 6;
+    --unit: calc(min(var(--scale), calc(var(--maxScale) * 3 / (6 + var(--gutter)))) / 6);
 }
 
 .landing { --gutter: 5; }
