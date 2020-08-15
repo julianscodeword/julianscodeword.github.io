@@ -1,12 +1,13 @@
 :root {
     --scale: 33vmin;
-    --max: 75vmax;
+    --max: 75;
+    --maxScale: calc(var(--max) * 1vmax);
     --gutter: 2;
-    --unit: min(--scale, --max * 3 / (6 + --gutter)) / 6;
+    --unit: min(--scale, --maxScale * 3 / (6 + --gutter)) / 6;
 }
 
 .landing { --gutter: 5; }
-.landing { --scale: 100vmin; --max: 100vmax; }
+.landing { --scale: 100vmin; --maxScale: 100; }
 
-@media (orientation: portrait) { :root { --max: 100vmax; } }
+@media (orientation: portrait) { :root { --maxScale: 100; } }
 @media (max-width: 650px), (max-height: 650px) { :root { --gutter: 1; } .landing { --gutter: 1; } }
