@@ -55005,7 +55005,7 @@ function PuzzleComponent_x_line_1_Template(rf, ctx) {
         const line_r1 = ctx.$implicit;
         const i_r2 = ctx.index;
         const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", i_r2 % 2 ? "even" : "odd")("index", i_r2)("outline", line_r1)("isRevealed", ctx_r0.isActive || ctx_r0.isIntrusive)("isFinished", ctx_r0.isFinished)("appearance", ctx_r0.appearance);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", i_r2 % 2 ? "even" : "odd")("index", i_r2)("outline", line_r1)("isRevealed", ctx_r0.isActive)("isFinished", ctx_r0.isFinished)("appearance", ctx_r0.appearance);
     }
 }
 let PuzzleComponent = /*@__PURE__*/ (() => {
@@ -55040,25 +55040,32 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
                 this.renderer.removeClass(document.body, 'navigating');
         }
         ngOnInit() {
-            this.style = this.sanitizer.bypassSecurityTrustStyle(`
-        --columns: ${this.outline.dimensions.width};
-        --rows: ${this.outline.dimensions.height};
-        --revealDuration: ${this.appearance.revealDuration}ms;
-        --highlightDuration: ${this.appearance.highlightDuration}ms;
-        --offsetBase: ${this.offset};
-
-        --maxScale: calc(var(--max) * 1vmax);
-        --offsetWithGutter: calc(var(--offsetBase) + var(--gutter));
-        --m: calc(var(--columns) + 2 * var(--gutter));
-        --n: var(--rows);
-        --ratio: calc(var(--m) / var(--n));
-        --flippedRatio: calc(1 / var(--ratio));
-        --margin: min(0.5vmin, var(--maxMargin));
-        --xScale: min(var(--scale), calc(var(--maxScale) * var(--flippedRatio)));
-        --yScale: min(calc(var(--scale) * var(--ratio)), var(--maxScale));
-        --unit: calc(var(--xScale) / var(--n));
-        --offset: calc(-1 * var(--unit) * var(--offsetWithGutter));    
-      `);
+            let styles = `
+      --columns: ${this.outline.dimensions.width};
+      --rows: ${this.outline.dimensions.height};
+      --revealDuration: ${this.appearance.revealDuration}ms;
+      --highlightDuration: ${this.appearance.highlightDuration}ms;
+      --offsetBase: ${this.offset};
+    `;
+            if (this.isIntrusive) {
+                styles += `
+        --max: 100;
+      `;
+            }
+            styles += `
+      --maxScale: calc(var(--max) * 1vmax);
+      --offsetWithGutter: calc(var(--offsetBase) + var(--gutter));
+      --m: calc(var(--columns) + 2 * var(--gutter));
+      --n: var(--rows);
+      --ratio: calc(var(--m) / var(--n));
+      --flippedRatio: calc(1 / var(--ratio));
+      --margin: min(0.5vmin, var(--maxMargin));
+      --xScale: min(var(--scale), calc(var(--maxScale) * var(--flippedRatio)));
+      --yScale: min(calc(var(--scale) * var(--ratio)), var(--maxScale));
+      --unit: calc(var(--xScale) / var(--n));
+      --offset: calc(-1 * var(--unit) * var(--offsetWithGutter));    
+    `;
+            this.style = this.sanitizer.bypassSecurityTrustStyle(styles);
         }
         wordClicked(target) {
             if (this.isActive) {
