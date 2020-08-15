@@ -5,6 +5,10 @@
 }
 
 @media (orientation: portrait) {
+    .readable {
+        column-count: 1;
+    }    
+
     body.navigating {
         .header {
             opacity: 0;

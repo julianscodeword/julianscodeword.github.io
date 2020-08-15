@@ -107,3 +107,8 @@ body.navigating {
         .date { font-weight: bold; }
     }
 }
+
+.readable {
+    column-count: 2;
+    column-gap: 2vmin;
+}
