@@ -55050,7 +55050,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
             if (this.isIntrusive) {
                 styles += `
         --max: 100;
-        --scale: 50vmin;
+        --scale: 100vmin;
       `;
             }
             styles += `
