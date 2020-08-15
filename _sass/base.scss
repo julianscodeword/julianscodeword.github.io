@@ -6,6 +6,7 @@
     padding: 3vmin;
     border-radius: 2px;
     font-size: var(--font);
+    line-height: calc(1.5 * var(--font));
     overflow: hidden;
     transition: 500ms opacity;
 }

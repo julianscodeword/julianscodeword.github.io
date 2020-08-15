@@ -3,7 +3,7 @@ layout: post
 title: About
 ---
 
-G'day! I'm a writer and I want to help you succeed.
+*G'day! I'm a writer and I want to help you succeed.*
 
 ![me](/assets/img/avatar.jpg)
 
