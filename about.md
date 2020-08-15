@@ -3,7 +3,7 @@ layout: default
 title: About
 ---
 
-![me](/img/avatar.jpg)
+![me](/assets/img/avatar.jpg)
 
 I am an experienced data engineer who has worked with both web companies and small, medium and large businesses in the finance, telecom, energy and smart building industries.
 
