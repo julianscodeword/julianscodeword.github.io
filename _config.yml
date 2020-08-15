@@ -10,26 +10,26 @@ defaults:
       path: "journal"
       type: "posts"
     values:
-      crumb.text: "Journal"
-      crumb.link: "/journal"
+      crumbtext: "Journal"
+      crumblink: "/journal"
   -
     scope:
       path: "fiction"
       type: "posts"
     values:
-      crumb.text: "Fiction"
-      crumb.link: "/fiction"
+      crumbtext: "Fiction"
+      crumblink: "/fiction"
   -
     scope:
       path: "articles"
       type: "posts"
     values:
-      crumb.text: "Articles"
-      crumb.link: "/articles"
+      crumbtext: "Articles"
+      crumblink: "/articles"
   -
     scope:
       path: "guides"
       type: "posts"
     values:
-      crumb.text: "Guides"
-      crumb.link: "/guides"
+      crumbtext: "Guides"
+      crumblink: "/guides"
