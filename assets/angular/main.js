@@ -55005,7 +55005,7 @@ function PuzzleComponent_x_line_1_Template(rf, ctx) {
         const line_r1 = ctx.$implicit;
         const i_r2 = ctx.index;
         const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", i_r2 % 2 ? "even" : "odd")("index", i_r2)("outline", line_r1)("isRevealed", ctx_r0.isActive)("isFinished", ctx_r0.isFinished)("appearance", ctx_r0.appearance);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", i_r2 % 2 ? "even" : "odd")("index", i_r2)("outline", line_r1)("isRevealed", ctx_r0.isActive || ctx_r0.isIntrusive)("isFinished", ctx_r0.isFinished)("appearance", ctx_r0.appearance);
     }
 }
 let PuzzleComponent = /*@__PURE__*/ (() => {
