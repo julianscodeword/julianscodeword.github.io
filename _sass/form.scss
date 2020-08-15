@@ -8,16 +8,16 @@ form {
 
 button, input, optgroup, select, textarea {
     border: none;
-    padding: 2vmin;
-    margin: 0 0 1vmin 0;
+    padding: 3vmin;
+    margin: 1vmin;
 }
 
 button, input, optgroup, select {
     height: 3vmin;
-    flex-basis: 50%;
+    flex-basis: calc(50% - 2vmin);
 }
 
 textarea {
     height: 7vmin;
-    flex-basis: 100%;
+    flex-basis: calc(100% - 2vmin);
 }
