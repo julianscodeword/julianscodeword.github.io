@@ -7,5 +7,5 @@ title: Contact
     <input type="text" name="name" placeholder="Name">
     <input type="email" name="_replyto" placeholder="Email">
     <textarea placeholder="Message"></textarea>
-    <input type="submit" value="Send">
+    <button type="submit">Send</button>
 </form>
