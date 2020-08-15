@@ -54637,7 +54637,7 @@ class JulianComponent {
 let IntrusiveJulianComponent = /*@__PURE__*/ (() => {
     class IntrusiveJulianComponent extends JulianComponent {
         constructor() {
-            super(new _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["PuzzleAppearance"](true, 500, 250, true, true, _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["Palette"].neon));
+            super(new _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["PuzzleAppearance"](true, 500, 250, true, true, _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["Colour"].white, _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["Palette"].neon));
         }
     }
     IntrusiveJulianComponent.ɵfac = function IntrusiveJulianComponent_Factory(t) { return new (t || IntrusiveJulianComponent)(); };
@@ -54656,7 +54656,7 @@ let IntrusiveJulianComponent = /*@__PURE__*/ (() => {
 let SubduedJulianComponent = /*@__PURE__*/ (() => {
     class SubduedJulianComponent extends JulianComponent {
         constructor() {
-            super(new _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["PuzzleAppearance"](false, 300, 1000, false, true, _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["Palette"].plain));
+            super(new _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["PuzzleAppearance"](false, 300, 1000, false, true, _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["Colour"].white, _models_puzzle_puzzle_appearance__WEBPACK_IMPORTED_MODULE_3__["Palette"].plain));
         }
     }
     SubduedJulianComponent.ɵfac = function SubduedJulianComponent_Factory(t) { return new (t || SubduedJulianComponent)(); };
