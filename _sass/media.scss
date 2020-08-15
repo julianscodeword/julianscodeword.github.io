@@ -2,6 +2,8 @@
 
 @media (max-width: 650px), (max-height: 650px) {
     :root { --font: 4vmin; }
+
+    body.content { padding: 4vmin; }
 }
 
 @media (orientation: portrait) {
@@ -60,6 +62,10 @@
             width: calc(100%);
             margin: 0;
         }
+    }
+
+    body.content {
+        padding: 4vmin;
     }
 
     .tmb {

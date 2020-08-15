@@ -46,6 +46,10 @@
     }    
 }
 
+body.content {
+    padding: 4vmin 33vmin 4vmin calc(33vmin - var(--unit));
+}
+
 .tmb {
     display: grid;
     grid-template-areas:
