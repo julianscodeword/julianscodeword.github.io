@@ -5,3 +5,31 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  -
+    scope:
+      path: "journal"
+      type: "posts"
+    values:
+      crumb.text: "Journal"
+      crumb.link: "/journal"
+  -
+    scope:
+      path: "fiction"
+      type: "posts"
+    values:
+      crumb.text: "Fiction"
+      crumb.link: "/fiction"
+  -
+    scope:
+      path: "articles"
+      type: "posts"
+    values:
+      crumb.text: "Articles"
+      crumb.link: "/articles"
+  -
+    scope:
+      path: "guides"
+      type: "posts"
+    values:
+      crumb.text: "Guides"
+      crumb.link: "/guides"
