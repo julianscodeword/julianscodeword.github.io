@@ -55055,7 +55055,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
       `;
             }
             styles += `
-      --maxScale: calc(var(--max) * 1vmax);
+      --maxScale: calc(var(--max) * var(--vmax));
       --offsetWithGutter: calc(var(--offsetBase) + var(--gutter));
       --m: calc(var(--columns) + 2 * var(--gutter));
       --n: var(--rows);
