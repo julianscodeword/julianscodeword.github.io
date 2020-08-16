@@ -54468,24 +54468,14 @@ let BookComponent = /*@__PURE__*/ (() => {
             this.units = "px";
         }
         flipTo(pageNumber) {
-            console.log("FLIP TO", this.pageNumber);
-            this.log();
-            this.refreshWidths();
+            this.reset();
             this.pageNumber = pageNumber;
         }
         onResize() {
-            this.refreshWidths();
-            this.log();
+            this.reset();
         }
         ngAfterViewChecked() {
-            this.refreshWidths();
-            this.log();
-        }
-        log() {
-            console.log("Page Width", this.pageWidth);
-            console.log("Total Content Width", this.totalWidth);
-            console.log("Page Offset", this.pageWidth);
-            console.log("No. of Pages", this.numberOfPages);
+            this.reset();
         }
         get pageOffset() {
             return (1 - this.pageNumber) * this.pageWidth;
@@ -54496,7 +54486,8 @@ let BookComponent = /*@__PURE__*/ (() => {
         get numberOfPages() {
             return Math.round(this.totalWidth / this.pageWidth);
         }
-        refreshWidths() {
+        reset() {
+            this.pageNumber = 1;
             this.pageWidth = !!this.element ? 1.02 * this.element.nativeElement.getBoundingClientRect().width : 0;
             this.totalWidth = !!this.contentElement ? 1.02 * this.contentElement.nativeElement.scrollWidth : 0;
         }
@@ -54563,12 +54554,10 @@ let PagerComponent = /*@__PURE__*/ (() => {
             this.flippedTo = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
         goToPreviousPage() {
-            console.log("PREV PAGE", this.pageNumber, this.numberOfPages);
             if (this.pageNumber > 1)
                 this.flipTo(this.pageNumber - 1);
         }
         goToNextPage() {
-            console.log("NEXT PAGE", this.pageNumber, this.numberOfPages);
             if (this.pageNumber < this.numberOfPages)
                 this.flipTo(this.pageNumber + 1);
         }
