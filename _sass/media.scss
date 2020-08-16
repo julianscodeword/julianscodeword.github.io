@@ -4,7 +4,6 @@
     :root { --font: 4vmin; }
 
     body.content { padding: 4vmin; }
-    input, optgroup, select { flex-basis: calc(100% - 2vmin); }
 }
 
 @media (orientation: portrait) {
