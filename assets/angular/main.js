@@ -54592,7 +54592,7 @@ let PagerComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             }
-        }, styles: ["[_nghost-%COMP%] {\n  display: grid;\n  grid-template-columns: -webkit-max-content 1fr -webkit-max-content;\n  grid-template-columns: max-content 1fr max-content;\n  grid-template-rows: 1fr;\n  grid-template-areas: \"LEFT MIDDLE RIGHT\";\n  align-content: space-around;\n  margin-top: 2vmin;\n  font-size: calc(2 * var(--font));\n}\n[_nghost-%COMP%]   .left[_ngcontent-%COMP%] {\n  grid-area: LEFT;\n}\n[_nghost-%COMP%]   .right[_ngcontent-%COMP%] {\n  grid-area: RIGHT;\n}\n[_nghost-%COMP%]   .button[_ngcontent-%COMP%] {\n  transition: 500ms color;\n  cursor: pointer;\n}\n[_nghost-%COMP%]   .button[_ngcontent-%COMP%]:hover {\n  color: rgba(17, 50, 51, 0.65);\n}"] });
+        }, styles: ["[_nghost-%COMP%] {\n  display: grid;\n  grid-template-columns: -webkit-max-content 1fr -webkit-max-content;\n  grid-template-columns: max-content 1fr max-content;\n  grid-template-rows: 1fr;\n  grid-template-areas: \"LEFT MIDDLE RIGHT\";\n  align-content: space-around;\n  margin-top: calc(2 * var(--vmin));\n  font-size: calc(2 * var(--font));\n}\n[_nghost-%COMP%]   .left[_ngcontent-%COMP%] {\n  grid-area: LEFT;\n}\n[_nghost-%COMP%]   .right[_ngcontent-%COMP%] {\n  grid-area: RIGHT;\n}\n[_nghost-%COMP%]   .button[_ngcontent-%COMP%] {\n  transition: 500ms color;\n  cursor: pointer;\n}\n[_nghost-%COMP%]   .button[_ngcontent-%COMP%]:hover {\n  color: rgba(17, 50, 51, 0.65);\n}"] });
     return PagerComponent;
 })();
 
@@ -55051,7 +55051,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
             if (this.isIntrusive) {
                 styles += `
         --max: 100;
-        --scale: 100vmin;
+        --scale: calc(100 * var(--vmin));
       `;
             }
             styles += `
@@ -55061,7 +55061,7 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
       --n: var(--rows);
       --ratio: calc(var(--m) / var(--n));
       --flippedRatio: calc(1 / var(--ratio));
-      --margin: min(0.5vmin, var(--maxMargin));
+      --margin: min(calc(0.5 * var(--vmin)), var(--maxMargin));
       --xScale: min(var(--scale), calc(var(--maxScale) * var(--flippedRatio)));
       --yScale: min(calc(var(--scale) * var(--ratio)), var(--maxScale));
       --unit: calc(var(--xScale) / var(--n));

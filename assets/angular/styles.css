@@ -1,17 +1,19 @@
 :root {
   --gutter: 2;
   --maxMargin: 2px;
-  --scale: 33vmin;
+  --vmin: calc(var(--viewmin, 100vmin) / 100);
+  --vmax: calc(var(--viewmax, 100vmax) / 100);
+  --scale: calc(33 * var(--vmin));
   --max: 75;
   --borderRadius: 2px;
-  --font: 2.5vmin;
+  --font: calc(2.5 * var(--vmin));
 }
 
 @media (max-width: 650px), (max-height: 650px) {
   :root {
     --gutter: 1;
-    --scale: calc(var(--max) * 1vmin);
-    --font: 4vmin;
+    --scale: calc(var(--max) * var(--vmin));
+    --font: calc(4 * var(--vmin));
   }
 }
 
