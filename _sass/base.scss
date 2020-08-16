@@ -76,7 +76,15 @@ body.navigating {
     display: inline-block;
 }
 
-.header, .legal-text {
+.breadcrumb {
+    color: white;
+}
+
+.header {
+    user-select: none;
+}
+
+.legal-text {
     user-select: none;
     pointer-events: none;
 }
