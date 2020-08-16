@@ -94,7 +94,7 @@ body.navigating {
         border-radius: 0.5vmin;
         margin: 1vmin;
         padding: 1vmin;
-        width: 33%;
+        width: calc(33% - 2vmin);
         filter: saturate(0.3);
         transition: filter 500ms;
 
@@ -135,4 +135,9 @@ blockquote {
     p {
         margin: 0;
     }
+}
+
+.preparing {
+    opacity: 0;
+    transition: opacity 500ms;
 }

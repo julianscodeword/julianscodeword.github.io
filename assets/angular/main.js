@@ -54460,13 +54460,15 @@ __webpack_require__.r(__webpack_exports__);
 const _c0 = ["content"];
 let BookComponent = /*@__PURE__*/ (() => {
     class BookComponent {
-        constructor(element) {
+        constructor(element, renderer) {
             this.element = element;
+            this.renderer = renderer;
             this.isSplitIntoColumns = true;
             this.isABook = true;
             this.pageNumber = 1;
             this.units = "px";
         }
+        ngOnInit() { this.renderer.removeClass(this.element, 'preparing'); }
         flipTo(pageNumber) {
             this.refreshWidths();
             console.log("flip to", pageNumber);
@@ -54501,7 +54503,7 @@ let BookComponent = /*@__PURE__*/ (() => {
             this.totalWidth = !!this.element ? 1.02 * this.contentElement.nativeElement.getBoundingClientRect().width : 0;
         }
     }
-    BookComponent.ɵfac = function BookComponent_Factory(t) { return new (t || BookComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])); };
+    BookComponent.ɵfac = function BookComponent_Factory(t) { return new (t || BookComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"])); };
     BookComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BookComponent, selectors: [["x-book"]], viewQuery: function BookComponent_Query(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c0, true);
