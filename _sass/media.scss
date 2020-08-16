@@ -9,6 +9,10 @@
 @media (orientation: portrait) {
     input, optgroup, select { flex-basis: calc(100% - 2vmin); }
 
+    .entries {
+        --entryWidth: 100%;
+    }
+
     .readable {
         column-count: 1;
     }    
