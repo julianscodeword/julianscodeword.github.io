@@ -17,6 +17,6 @@
 
 @media (orientation: portrait) {
   :root {
-    --max: 100;
+    --max: 90;
   }
 }
