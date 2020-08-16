@@ -54468,10 +54468,10 @@ let BookComponent = /*@__PURE__*/ (() => {
             this.units = "px";
         }
         flipTo(pageNumber) {
-            this.refreshWidths();
-            console.log("flip to", pageNumber);
-            this.pageNumber = pageNumber;
+            console.log("FLIP TO", this.pageNumber);
             this.log();
+            this.refreshWidths();
+            this.pageNumber = pageNumber;
         }
         onResize() {
             this.refreshWidths();
@@ -54563,10 +54563,12 @@ let PagerComponent = /*@__PURE__*/ (() => {
             this.flippedTo = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
         goToPreviousPage() {
+            console.log("PREV PAGE", this.pageNumber, this.numberOfPages);
             if (this.pageNumber > 1)
                 this.flipTo(this.pageNumber - 1);
         }
         goToNextPage() {
+            console.log("NEXT PAGE", this.pageNumber, this.numberOfPages);
             if (this.pageNumber < this.numberOfPages)
                 this.flipTo(this.pageNumber + 1);
         }
