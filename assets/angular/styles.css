@@ -4,7 +4,7 @@
   --vmin: calc(var(--viewmin, 100vmin) / 100);
   --vmax: calc(var(--viewmax, 100vmax) / 100);
   --scale: calc(33 * var(--vmin));
-  --max: 75;
+  --max: 90;
   --borderRadius: 2px;
   --font: calc(2.5 * var(--vmin));
 }

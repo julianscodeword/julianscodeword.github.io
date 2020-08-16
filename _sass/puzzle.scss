@@ -1,6 +1,6 @@
 :root {
     --scale: 33vmin;
-    --max: 75;
+    --max: 90;
     --maxScale: calc(var(--max) * 1vmax);
     --gutter: 2;
     --unit: calc(min(var(--scale), calc(var(--maxScale) * 3 / (6 + var(--gutter)))) / 6);
