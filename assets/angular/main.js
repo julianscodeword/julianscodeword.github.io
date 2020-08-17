@@ -54462,7 +54462,7 @@ let BookComponent = /*@__PURE__*/ (() => {
     class BookComponent {
         constructor(element) {
             this.element = element;
-            this.isPreparing = true;
+            this.isReady = true;
             this.isSplitIntoColumns = true;
             this.isABook = true;
             this.pageNumber = 1;
@@ -54477,7 +54477,6 @@ let BookComponent = /*@__PURE__*/ (() => {
         }
         ngAfterViewChecked() {
             this.reset();
-            this.isPreparing = false;
         }
         get pageOffset() {
             return (1 - this.pageNumber) * this.pageWidth;
@@ -54508,9 +54507,9 @@ let BookComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("resize", function BookComponent_resize_HostBindingHandler() { return ctx.onResize(); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveWindow"]);
             }
             if (rf & 2) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("preparing", ctx.isPreparing)("columns", ctx.isSplitIntoColumns)("book", ctx.isABook);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("ready", ctx.isReady)("columns", ctx.isSplitIntoColumns)("book", ctx.isABook);
             }
-        }, inputs: { isPreparing: "isPreparing", isSplitIntoColumns: "isSplitIntoColumns", isABook: "isABook", pageNumber: "pageNumber", units: "units" }, decls: 5, vars: 4, consts: [[1, "wrapper", "top"], [1, "binding"], ["content", ""], ["name", "content"], [1, "bottom", 3, "pageNumber", "numberOfPages", "flippedTo"]], template: function BookComponent_Template(rf, ctx) {
+        }, inputs: { isReady: "isReady", isSplitIntoColumns: "isSplitIntoColumns", isABook: "isABook", pageNumber: "pageNumber", units: "units" }, decls: 5, vars: 4, consts: [[1, "wrapper", "top"], [1, "binding"], ["content", ""], ["name", "content"], [1, "bottom", 3, "pageNumber", "numberOfPages", "flippedTo"]], template: function BookComponent_Template(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1, 2);
@@ -54527,7 +54526,7 @@ let BookComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("pageNumber", ctx.pageNumber)("numberOfPages", ctx.numberOfPages);
             }
-        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n  position: relative;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  height: 100%;\n}"], encapsulation: 3 });
+        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n  position: relative;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  height: 100%;\n}\n:host .ready {\n  opacity: 1;\n}"], encapsulation: 3 });
     return BookComponent;
 })();
 
