@@ -54470,7 +54470,6 @@ let BookComponent = /*@__PURE__*/ (() => {
         flipTo(pageNumber) {
             this.reset();
             this.pageNumber = pageNumber;
-            console.log("FLIP TO", pageNumber, this.pageWidth, this.totalWidth);
         }
         onResize() {
             this.reset();
@@ -54491,7 +54490,6 @@ let BookComponent = /*@__PURE__*/ (() => {
             this.pageNumber = 1;
             this.pageWidth = !!this.element ? 1.02 * this.element.nativeElement.getBoundingClientRect().width : 0;
             this.totalWidth = !!this.contentElement ? 1.02 * this.contentElement.nativeElement.scrollWidth : 0;
-            console.log("RESET", this.pageWidth, this.totalWidth);
         }
     }
     BookComponent.ɵfac = function BookComponent_Factory(t) { return new (t || BookComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])); };
@@ -54525,7 +54523,7 @@ let BookComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("pageNumber", ctx.pageNumber)("numberOfPages", ctx.numberOfPages);
             }
-        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n  position: relative;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  height: 100%;\n}"], encapsulation: 3 });
+        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n  position: relative;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  height: 100%;\n  display: block;\n}"], encapsulation: 3 });
     return BookComponent;
 })();
 
@@ -54554,12 +54552,10 @@ let PagerComponent = /*@__PURE__*/ (() => {
             this.flippedTo = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
         goToPreviousPage() {
-            console.log("PREVIOUS", this.pageNumber, this.numberOfPages);
             if (this.pageNumber > 1)
                 this.flipTo(this.pageNumber - 1);
         }
         goToNextPage() {
-            console.log("NEXT", this.pageNumber, this.numberOfPages);
             if (this.pageNumber < this.numberOfPages)
                 this.flipTo(this.pageNumber + 1);
         }
@@ -54573,15 +54569,13 @@ let PagerComponent = /*@__PURE__*/ (() => {
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("pager", ctx.isAPager);
             }
-        }, inputs: { isAPager: "isAPager", pageNumber: "pageNumber", numberOfPages: "numberOfPages" }, outputs: { flippedTo: "flippedTo" }, decls: 4, vars: 0, consts: [[1, "left", "button", "back-button", 3, "click"], ["name", "left"], [1, "right", "button", "next-button", 3, "click"], ["name", "right"]], template: function PagerComponent_Template(rf, ctx) {
+        }, inputs: { isAPager: "isAPager", pageNumber: "pageNumber", numberOfPages: "numberOfPages" }, outputs: { flippedTo: "flippedTo" }, decls: 2, vars: 0, consts: [["name", "left", 1, "left", "button", "back-button", 3, "click"], ["name", "right", 1, "right", "button", "next-button", 3, "click"]], template: function PagerComponent_Template(rf, ctx) {
             if (rf & 1) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 0);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PagerComponent_Template_span_click_0_listener() { return ctx.goToPreviousPage(); });
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "slot", 1);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "slot", 0);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PagerComponent_Template_slot_click_0_listener() { return ctx.goToPreviousPage(); });
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "span", 2);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PagerComponent_Template_span_click_2_listener() { return ctx.goToNextPage(); });
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "slot", 3);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "slot", 1);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PagerComponent_Template_slot_click_1_listener() { return ctx.goToNextPage(); });
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             }
         }, styles: ["[_nghost-%COMP%] {\n  display: grid;\n  grid-template-columns: -webkit-max-content 1fr -webkit-max-content;\n  grid-template-columns: max-content 1fr max-content;\n  grid-template-rows: 1fr;\n  grid-template-areas: \"LEFT MIDDLE RIGHT\";\n  align-content: space-around;\n  margin-top: calc(2 * var(--vmin));\n  font-size: calc(2 * var(--font));\n}\n[_nghost-%COMP%]   .left[_ngcontent-%COMP%] {\n  grid-area: LEFT;\n}\n[_nghost-%COMP%]   .right[_ngcontent-%COMP%] {\n  grid-area: RIGHT;\n}\n[_nghost-%COMP%]   .button[_ngcontent-%COMP%] {\n  transition: 500ms color;\n  cursor: pointer;\n}\n[_nghost-%COMP%]   .button[_ngcontent-%COMP%]:hover {\n  color: rgba(17, 50, 51, 0.65);\n}"] });
