@@ -54555,12 +54555,12 @@ let PagerComponent = /*@__PURE__*/ (() => {
             this.flippedTo = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
         goToPreviousPage() {
-            console.log("PREVIOUS", this.pageNumber);
+            console.log("PREVIOUS", this.pageNumber, this.numberOfPages);
             if (this.pageNumber > 1)
                 this.flipTo(this.pageNumber - 1);
         }
         goToNextPage() {
-            console.log("NEXT", this.pageNumber);
+            console.log("NEXT", this.pageNumber, this.numberOfPages);
             if (this.pageNumber < this.numberOfPages)
                 this.flipTo(this.pageNumber + 1);
         }
@@ -54574,7 +54574,7 @@ let PagerComponent = /*@__PURE__*/ (() => {
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("pager", ctx.isAPager);
             }
-        }, inputs: { isAPager: "isAPager", pageNumber: "pageNumber", numberOfPages: "numberOfPages" }, outputs: { flippedTo: "flippedTo" }, decls: 4, vars: 0, consts: [[1, "right", "button", "back-button", 3, "click"], ["name", "left"], [1, "left", "button", "next-button", 3, "click"], ["name", "right"]], template: function PagerComponent_Template(rf, ctx) {
+        }, inputs: { isAPager: "isAPager", pageNumber: "pageNumber", numberOfPages: "numberOfPages" }, outputs: { flippedTo: "flippedTo" }, decls: 4, vars: 0, consts: [[1, "left", "button", "back-button", 3, "click"], ["name", "left"], [1, "right", "button", "next-button", 3, "click"], ["name", "right"]], template: function PagerComponent_Template(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 0);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PagerComponent_Template_span_click_0_listener() { return ctx.goToPreviousPage(); });
