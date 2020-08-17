@@ -54471,6 +54471,7 @@ let BookComponent = /*@__PURE__*/ (() => {
             this.pageNumber = pageNumber;
         }
         onResize() {
+            this.pageNumber = 1;
             this.reset();
         }
         ngAfterViewChecked() {
@@ -54486,7 +54487,6 @@ let BookComponent = /*@__PURE__*/ (() => {
             return Math.round(this.totalWidth / this.pageWidth);
         }
         reset() {
-            this.pageNumber = 1;
             this.pageWidth = !!this.element ? 1.02 * this.element.nativeElement.getBoundingClientRect().width : 0;
             this.totalWidth = !!this.contentElement ? 1.02 * this.contentElement.nativeElement.scrollWidth : 0;
         }
