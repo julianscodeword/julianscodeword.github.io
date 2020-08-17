@@ -54526,7 +54526,7 @@ let BookComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("pageNumber", ctx.pageNumber)("numberOfPages", ctx.numberOfPages);
             }
-        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n  position: relative;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  height: 100%;\n}\n:host.ready {\n  opacity: 1;\n}"], encapsulation: 3 });
+        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n  position: relative;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  height: 100%;\n}"], encapsulation: 3 });
     return BookComponent;
 })();
 
@@ -54645,7 +54645,7 @@ let IntrusiveJulianComponent = /*@__PURE__*/ (() => {
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("outline", ctx.outline)("appearance", ctx.appearance);
             }
-        }, directives: [_puzzle_puzzle_component__WEBPACK_IMPORTED_MODULE_4__["PuzzleComponent"]], styles: ["[_nghost-%COMP%] {\n  display: flex;\n}"] });
+        }, directives: [_puzzle_puzzle_component__WEBPACK_IMPORTED_MODULE_4__["PuzzleComponent"]], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  opacity: 0;\n}\n.ready[_nghost-%COMP%] {\n  opacity: 1;\n}"] });
     return IntrusiveJulianComponent;
 })();
 let SubduedJulianComponent = /*@__PURE__*/ (() => {
@@ -54664,7 +54664,7 @@ let SubduedJulianComponent = /*@__PURE__*/ (() => {
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("outline", ctx.outline)("appearance", ctx.appearance);
             }
-        }, directives: [_puzzle_puzzle_component__WEBPACK_IMPORTED_MODULE_4__["PuzzleComponent"]], styles: ["[_nghost-%COMP%] {\n  display: flex;\n}"] });
+        }, directives: [_puzzle_puzzle_component__WEBPACK_IMPORTED_MODULE_4__["PuzzleComponent"]], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  opacity: 0;\n}\n.ready[_nghost-%COMP%] {\n  opacity: 1;\n}"] });
     return SubduedJulianComponent;
 })();
 
