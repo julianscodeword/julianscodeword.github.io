@@ -54525,7 +54525,7 @@ let BookComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("pageNumber", ctx.pageNumber)("numberOfPages", ctx.numberOfPages);
             }
-        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n  position: relative;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  height: 100%;\n}\n:host [slot] > * {\n  transition: opacity 500ms;\n  opacity: 1;\n}"], encapsulation: 3 });
+        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n  position: relative;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  height: 100%;\n}\n:host [slot] article, :host [slot] i {\n  transition: opacity 500ms;\n  opacity: 1;\n}"], encapsulation: 3 });
     return BookComponent;
 })();
 
