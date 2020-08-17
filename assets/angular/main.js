@@ -54468,7 +54468,6 @@ let BookComponent = /*@__PURE__*/ (() => {
             this.units = "px";
         }
         flipTo(pageNumber) {
-            this.reset();
             this.pageNumber = pageNumber;
         }
         onResize() {
@@ -54552,12 +54551,14 @@ let PagerComponent = /*@__PURE__*/ (() => {
             this.flippedTo = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
         goToPreviousPage() {
-            if (this.pageNumber > 1)
+            if (this.pageNumber > 1) {
                 this.flipTo(this.pageNumber - 1);
+            }
         }
         goToNextPage() {
-            if (this.pageNumber < this.numberOfPages)
+            if (this.pageNumber < this.numberOfPages) {
                 this.flipTo(this.pageNumber + 1);
+            }
         }
         flipTo(pageNumber) {
             this.pageNumber = pageNumber;
@@ -54900,11 +54901,12 @@ let LineComponent = /*@__PURE__*/ (() => {
         }
         touchStart() { this.isTouching = true; }
         mouseOver() {
-            if (!this.isTouching || this.isRevealed)
+            if (!this.isTouching || this.isRevealed) {
                 this.isActive = true;
+            }
         }
         mouseOut() { this.isActive = false; }
-        click() {
+        click(event) {
             event.stopPropagation();
             this.isClicked = true;
             this.onClick.emit(this.outline.word.target);
@@ -54939,7 +54941,7 @@ let LineComponent = /*@__PURE__*/ (() => {
     LineComponent.ɵfac = function LineComponent_Factory(t) { return new (t || LineComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"])); };
     LineComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LineComponent, selectors: [["x-line"]], hostVars: 14, hostBindings: function LineComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchstart", function LineComponent_touchstart_HostBindingHandler() { return ctx.touchStart(); })("mouseover", function LineComponent_mouseover_HostBindingHandler($event) { return ctx.mouseOver($event); })("mouseout", function LineComponent_mouseout_HostBindingHandler($event) { return ctx.mouseOut($event); })("click", function LineComponent_click_HostBindingHandler($event) { return ctx.click($event); });
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchstart", function LineComponent_touchstart_HostBindingHandler() { return ctx.touchStart(); })("mouseover", function LineComponent_mouseover_HostBindingHandler() { return ctx.mouseOver(); })("mouseout", function LineComponent_mouseout_HostBindingHandler() { return ctx.mouseOut(); })("click", function LineComponent_click_HostBindingHandler($event) { return ctx.click($event); });
             }
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](ctx.style);
@@ -55008,12 +55010,14 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
         }
         touchStart() { this.isTouching = true; }
         mouseOver() {
-            if (!this.isTouching)
+            if (!this.isTouching) {
                 this.setActive(true);
+            }
         }
         mouseOut() {
-            if (!this.isTouching)
+            if (!this.isTouching) {
                 this.setActive(false);
+            }
         }
         get isIntrusive() { return this.appearance.isIntrusive; }
         get offset() {
@@ -55021,10 +55025,12 @@ let PuzzleComponent = /*@__PURE__*/ (() => {
         }
         setActive(isActive) {
             this.isActive = isActive;
-            if (isActive)
+            if (isActive) {
                 this.renderer.addClass(document.body, 'navigating');
-            else
+            }
+            else {
                 this.renderer.removeClass(document.body, 'navigating');
+            }
         }
         ngOnInit() {
             let styles = `
