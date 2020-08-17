@@ -54523,7 +54523,7 @@ let BookComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("pageNumber", ctx.pageNumber)("numberOfPages", ctx.numberOfPages);
             }
-        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n  position: relative;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  height: 100%;\n  display: block;\n}"], encapsulation: 3 });
+        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n  position: relative;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  height: 100%;\n}\n:host slot {\n  display: block;\n}"], encapsulation: 3 });
     return BookComponent;
 })();
 
@@ -54578,7 +54578,7 @@ let PagerComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PagerComponent_Template_slot_click_1_listener() { return ctx.goToNextPage(); });
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             }
-        }, styles: ["[_nghost-%COMP%] {\n  display: grid;\n  grid-template-columns: -webkit-max-content 1fr -webkit-max-content;\n  grid-template-columns: max-content 1fr max-content;\n  grid-template-rows: 1fr;\n  grid-template-areas: \"LEFT MIDDLE RIGHT\";\n  align-content: space-around;\n  margin-top: calc(2 * var(--vmin));\n  font-size: calc(2 * var(--font));\n}\n[_nghost-%COMP%]   .left[_ngcontent-%COMP%] {\n  grid-area: LEFT;\n}\n[_nghost-%COMP%]   .right[_ngcontent-%COMP%] {\n  grid-area: RIGHT;\n}\n[_nghost-%COMP%]   .button[_ngcontent-%COMP%] {\n  transition: 500ms color;\n  cursor: pointer;\n}\n[_nghost-%COMP%]   .button[_ngcontent-%COMP%]:hover {\n  color: rgba(17, 50, 51, 0.65);\n}"] });
+        }, styles: ["[_nghost-%COMP%] {\n  display: grid;\n  grid-template-columns: -webkit-max-content 1fr -webkit-max-content;\n  grid-template-columns: max-content 1fr max-content;\n  grid-template-rows: 1fr;\n  grid-template-areas: \"LEFT MIDDLE RIGHT\";\n  align-content: space-around;\n  margin-top: calc(2 * var(--vmin));\n  font-size: calc(2 * var(--font));\n}\n[_nghost-%COMP%]   .left[_ngcontent-%COMP%] {\n  grid-area: LEFT;\n}\n[_nghost-%COMP%]   .right[_ngcontent-%COMP%] {\n  grid-area: RIGHT;\n}\n[_nghost-%COMP%]   .button[_ngcontent-%COMP%] {\n  transition: 500ms color;\n  cursor: pointer;\n}\n[_nghost-%COMP%]   .button[_ngcontent-%COMP%]:hover {\n  color: rgba(17, 50, 51, 0.65);\n}\n[_nghost-%COMP%]   slot[_ngcontent-%COMP%] {\n  display: block;\n}"] });
     return PagerComponent;
 })();
 
