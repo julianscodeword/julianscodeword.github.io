@@ -154,4 +154,5 @@ blockquote {
 
 [slot] {
     opacity: 0;
+    transition: opacity 500ms;
 }
