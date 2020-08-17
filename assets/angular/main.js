@@ -54914,19 +54914,18 @@ let LineComponent = /*@__PURE__*/ (() => {
         }
         stylesFor(index) {
             const randomDuration = Math.random() * this.appearance.highlightDuration;
-            const randomPosition = Math.random() * 50;
             const duration = this.appearance.isIntrusive ? randomDuration : this.appearance.highlightDuration;
             const delay = this.appearance.isIntrusive ? randomDuration : 0;
             return {
                 filter: `hue-rotate(calc(30deg * ${index})) brightness(1.2)`,
                 transitionProperty: `transform, background-color, opacity`,
                 transitionDuration: `${duration}ms`,
-                transitionDelay: `${delay}ms`,
-                '--position': `${randomPosition}px`
+                transitionDelay: `${delay}ms`
             };
         }
         ngOnInit() {
             const palette = this.appearance.palette.forIndex(this.index);
+            const randomPosition = Math.random() * 50;
             this.style = this.sanitizer.bypassSecurityTrustStyle(`
       --prefixsize: ${this.outline.indent};
       --suffixsize: ${this.outline.outdent};
@@ -54937,6 +54936,7 @@ let LineComponent = /*@__PURE__*/ (() => {
       --red: ${palette.red};
       --green: ${palette.green};
       --blue: ${palette.blue};
+      --position: ${randomPosition}px;
   `);
         }
     }
