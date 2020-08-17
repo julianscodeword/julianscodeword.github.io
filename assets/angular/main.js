@@ -54491,6 +54491,7 @@ let BookComponent = /*@__PURE__*/ (() => {
             this.pageNumber = 1;
             this.pageWidth = !!this.element ? 1.02 * this.element.nativeElement.getBoundingClientRect().width : 0;
             this.totalWidth = !!this.contentElement ? 1.02 * this.contentElement.nativeElement.scrollWidth : 0;
+            console.log("RESET", this.pageWidth, this.totalWidth);
         }
     }
     BookComponent.ɵfac = function BookComponent_Factory(t) { return new (t || BookComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])); };
