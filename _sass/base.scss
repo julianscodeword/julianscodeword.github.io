@@ -151,8 +151,3 @@ blockquote {
     float: left;
     margin: 1vmin;
 }
-
-[slot] {
-    opacity: 0;
-    transition: opacity 500ms;
-}
