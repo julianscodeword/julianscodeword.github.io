@@ -152,11 +152,11 @@ blockquote {
     margin: 1vmin;
 }
 
-x-book {
+x-book > * {
     opacity: 0;
     transition: opacity 500ms;
 }
 
-x-book.ready {
+x-book.ready > * {
     opacity: 1;
 }
