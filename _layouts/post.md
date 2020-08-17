@@ -4,7 +4,7 @@ class: content
 ---
 
 <x-book>
-    <article slot="content">{{ content }}</article>
-    <i slot="left" class="icon fa fa-arrow-circle-left"></i>
-    <i slot="right" class="icon fa fa-arrow-circle-right"></i>
+    <span slot="content"><article>{{ content }}</article></span>
+    <span slot="left"><i class="icon fa fa-arrow-circle-left"></i></span>
+    <span slot='right'><i class="icon fa fa-arrow-circle-right"></i></span>
 </x-book>
