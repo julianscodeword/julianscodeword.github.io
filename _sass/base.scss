@@ -151,3 +151,12 @@ blockquote {
     float: left;
     margin: 1vmin;
 }
+
+x-book {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+x-book.ready {
+    opacity: 1;
+}

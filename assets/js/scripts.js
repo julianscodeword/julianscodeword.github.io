@@ -6,3 +6,7 @@ const updateViewportHeight = () => {
 }
 window.addEventListener('resize', updateViewportHeight)
 updateViewportHeight();
+
+window.customElements.whenDefined("x-book").then(() => {
+    document.getElementsByTagName("x-book")[0].className += "ready";
+});
