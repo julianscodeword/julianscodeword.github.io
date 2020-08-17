@@ -54555,10 +54555,12 @@ let PagerComponent = /*@__PURE__*/ (() => {
             this.flippedTo = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
         goToPreviousPage() {
+            console.log("PREVIOUS", this.pageNumber);
             if (this.pageNumber > 1)
                 this.flipTo(this.pageNumber - 1);
         }
         goToNextPage() {
+            console.log("NEXT", this.pageNumber);
             if (this.pageNumber < this.numberOfPages)
                 this.flipTo(this.pageNumber + 1);
         }
