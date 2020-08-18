@@ -43,6 +43,7 @@ body {
     background-color: rgba(17, 50, 51, 0.8);
     font-family: Nunito, sans-serif;
     overflow: hidden;
+    z-index: 1;
 }
 
 body.content::before {
@@ -56,6 +57,7 @@ body.content::before {
     left: 0;
     width: 100vw;
     height: var(--vh);
+    z-index: 0;
 }
 
 body.navigating {
