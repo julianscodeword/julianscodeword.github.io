@@ -43,6 +43,26 @@ body {
     background-color: rgba(17, 50, 51, 1.0);
     font-family: Nunito, sans-serif;
     overflow: hidden;
+
+    background-size: cover;
+    background-position: center left;
+    z-index: 1;
+}
+
+body.content::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: var(--vh);
+    background-color: rgba(17, 50, 51, 0.85);
+    z-index: 2;
+}
+
+body > * {
+    z-index: 3;
 }
 
 body.navigating {
