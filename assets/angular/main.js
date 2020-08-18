@@ -54881,8 +54881,8 @@ function LineComponent_span_1_Template(rf, ctx) {
         const letter_r1 = ctx.$implicit;
         const i_r2 = ctx.index;
         const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](ctx_r0.letterStyles[i_r2]);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("pivot", letter_r1.isPivot)("nonpivot", !letter_r1.isPivot)("arm", !letter_r1.isPivot);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", ctx_r0.stylesFor(i_r2));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](letter_r1.character);
     }
@@ -54912,7 +54912,10 @@ let LineComponent = /*@__PURE__*/ (() => {
             this.onClick.emit(this.outline.word.target);
             this.isTouching = false;
         }
-        stylesFor(index) {
+        generateLetterStyles() {
+            this.letterStyles = this.outline.word.letters.map((_, index) => this.styleFor(index));
+        }
+        styleFor(index) {
             const randomDuration = Math.random() * this.appearance.highlightDuration;
             const duration = this.appearance.isIntrusive ? randomDuration : this.appearance.highlightDuration;
             const delay = this.appearance.isIntrusive ? randomDuration : 0;
@@ -54926,6 +54929,7 @@ let LineComponent = /*@__PURE__*/ (() => {
         }
         ngOnInit() {
             const palette = this.appearance.palette.forIndex(this.index);
+            this.generateLetterStyles();
             this.style = this.sanitizer.bypassSecurityTrustStyle(`
       --prefixsize: ${this.outline.indent};
       --suffixsize: ${this.outline.outdent};
@@ -54948,17 +54952,17 @@ let LineComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](ctx.style);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("touching", ctx.isTouching)("active", ctx.isActive)("line", ctx.isLine)("revealed", ctx.isRevealed)("clicked", ctx.isClicked)("finished", ctx.isFinished);
             }
-        }, inputs: { isTouching: "isTouching", isActive: "isActive", isRevealed: "isRevealed", isFinished: "isFinished", outline: "outline", appearance: "appearance", index: "index" }, outputs: { onClick: "onClick" }, decls: 3, vars: 1, consts: [[1, "block", "nonpivot", "space", "prefix"], ["class", "block letter", 3, "ngStyle", "pivot", "nonpivot", "arm", 4, "ngFor", "ngForOf"], [1, "block", "nonpivot", "space", "suffix"], [1, "block", "letter", 3, "ngStyle"]], template: function LineComponent_Template(rf, ctx) {
+        }, inputs: { isTouching: "isTouching", isActive: "isActive", isRevealed: "isRevealed", isFinished: "isFinished", outline: "outline", appearance: "appearance", index: "index" }, outputs: { onClick: "onClick" }, decls: 3, vars: 1, consts: [[1, "block", "nonpivot", "space", "prefix"], ["class", "block letter", 3, "style", "pivot", "nonpivot", "arm", 4, "ngFor", "ngForOf"], [1, "block", "nonpivot", "space", "suffix"], [1, "block", "letter"]], template: function LineComponent_Template(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "span", 0);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, LineComponent_span_1_Template, 2, 8, "span", 1);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, LineComponent_span_1_Template, 2, 9, "span", 1);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "span", 2);
             }
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.outline.word.letters);
             }
-        }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgStyle"]], styles: ["[_nghost-%COMP%] {\n  display: contents;\n}\n[_nghost-%COMP%]   .block[_ngcontent-%COMP%] {\n  display: block;\n  text-align: center;\n  border: var(--margin) solid black;\n  font-size: var(--font);\n  color: black;\n  font-weight: bold;\n  border-radius: calc(var(--margin) + var(--borderRadius));\n  transition: var(--highlightDuration) background-color;\n  mix-blend-mode: screen;\n  cursor: pointer;\n  filter: hue-rotate(calc(30deg * var(--index))) brightness(1.2);\n  transition-property: transform, background-color, opacity;\n  transition-duration: var(--duration);\n  transition-delay: var(--delay);\n}\n[_nghost-%COMP%]   .block[_ngcontent-%COMP%]::before {\n  content: \"\";\n  display: inline-block;\n  height: 100%;\n  vertical-align: middle;\n}\n[_nghost-%COMP%]   .block.prefix[_ngcontent-%COMP%] {\n  grid-column: calc(var(--prefixsize) + var(--gutter)) span;\n}\n[_nghost-%COMP%]   .block.suffix[_ngcontent-%COMP%] {\n  grid-column: calc(var(--suffixsize) + var(--gutter)) span;\n}\n[_nghost-%COMP%]   .block.pivot[_ngcontent-%COMP%] {\n  pointer-events: all;\n}\n[_nghost-%COMP%]   .block.suffix[_ngcontent-%COMP%] {\n  visibility: hidden;\n}\n[_nghost-%COMP%]   .block.nonpivot[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0);\n}\n[_nghost-%COMP%]   .block.pivot[_ngcontent-%COMP%] {\n  background-color: rgba(var(--nascentRed), var(--nascentGreen), var(--nascentBlue), 0.8);\n}\n.revealed[_nghost-%COMP%]   .block.space[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.05);\n}\n.revealed[_nghost-%COMP%]   .block.arm[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.4);\n}\n.revealed[_nghost-%COMP%]   .block.pivot[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.8);\n}\n.revealed.active[_nghost-%COMP%]   .block.space[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.2);\n}\n.revealed.active[_nghost-%COMP%]   .block.letter[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 1);\n}\n.finished[_nghost-%COMP%]   .block[_ngcontent-%COMP%] {\n  transform: translateX(var(--position)) translateY(var(--position));\n  border: none;\n  color: rgba(0, 0, 0, 0);\n}\n@media (orientation: portrait) {\n  [_nghost-%COMP%]   .block.prefix[_ngcontent-%COMP%] {\n    grid-column: unset;\n    grid-row: calc(var(--prefixsize) + var(--gutter)) span;\n  }\n  [_nghost-%COMP%]   .block.suffix[_ngcontent-%COMP%] {\n    grid-column: unset;\n    grid-row: calc(var(--suffixsize) + var(--gutter)) span;\n  }\n}"] });
+        }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]], styles: ["[_nghost-%COMP%] {\n  display: contents;\n}\n[_nghost-%COMP%]   .block[_ngcontent-%COMP%] {\n  display: block;\n  text-align: center;\n  border: var(--margin) solid black;\n  font-size: var(--font);\n  color: black;\n  font-weight: bold;\n  border-radius: calc(var(--margin) + var(--borderRadius));\n  transition: var(--highlightDuration) background-color;\n  mix-blend-mode: screen;\n  cursor: pointer;\n  filter: hue-rotate(calc(30deg * var(--index))) brightness(1.2);\n  transition-property: transform, background-color, opacity;\n  transition-duration: var(--duration);\n  transition-delay: var(--delay);\n}\n[_nghost-%COMP%]   .block[_ngcontent-%COMP%]::before {\n  content: \"\";\n  display: inline-block;\n  height: 100%;\n  vertical-align: middle;\n}\n[_nghost-%COMP%]   .block.prefix[_ngcontent-%COMP%] {\n  grid-column: calc(var(--prefixsize) + var(--gutter)) span;\n}\n[_nghost-%COMP%]   .block.suffix[_ngcontent-%COMP%] {\n  grid-column: calc(var(--suffixsize) + var(--gutter)) span;\n}\n[_nghost-%COMP%]   .block.pivot[_ngcontent-%COMP%] {\n  pointer-events: all;\n}\n[_nghost-%COMP%]   .block.suffix[_ngcontent-%COMP%] {\n  visibility: hidden;\n}\n[_nghost-%COMP%]   .block.nonpivot[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0);\n}\n[_nghost-%COMP%]   .block.pivot[_ngcontent-%COMP%] {\n  background-color: rgba(var(--nascentRed), var(--nascentGreen), var(--nascentBlue), 0.8);\n}\n.revealed[_nghost-%COMP%]   .block.space[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.05);\n}\n.revealed[_nghost-%COMP%]   .block.arm[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.4);\n}\n.revealed[_nghost-%COMP%]   .block.pivot[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.8);\n}\n.revealed.active[_nghost-%COMP%]   .block.space[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 0.2);\n}\n.revealed.active[_nghost-%COMP%]   .block.letter[_ngcontent-%COMP%] {\n  background-color: rgba(var(--red), var(--green), var(--blue), 1);\n}\n.finished[_nghost-%COMP%]   .block[_ngcontent-%COMP%] {\n  transform: translateX(var(--position)) translateY(var(--position));\n  border: none;\n  color: rgba(0, 0, 0, 0);\n}\n@media (orientation: portrait) {\n  [_nghost-%COMP%]   .block.prefix[_ngcontent-%COMP%] {\n    grid-column: unset;\n    grid-row: calc(var(--prefixsize) + var(--gutter)) span;\n  }\n  [_nghost-%COMP%]   .block.suffix[_ngcontent-%COMP%] {\n    grid-column: unset;\n    grid-row: calc(var(--suffixsize) + var(--gutter)) span;\n  }\n}"] });
     return LineComponent;
 })();
 
