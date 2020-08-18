@@ -48,7 +48,7 @@ body {
 
 body.content::before {
     content: "";
-    background-image: url('/assets/img/thumbnails/' + var(--thumbnail));
+    background-image: var(--thumbnail);
     display: block;
     background-size: cover;
     background-position: center left;
