@@ -54550,13 +54550,15 @@ let PagerComponent = /*@__PURE__*/ (() => {
             this.numberOfPages = 1;
             this.flippedTo = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         }
+        get hasNext() { return this.pageNumber < this.numberOfPages; }
+        get hasPrevious() { return this.pageNumber > 1; }
         goToPreviousPage() {
-            if (this.pageNumber > 1) {
+            if (this.hasPrevious) {
                 this.flipTo(this.pageNumber - 1);
             }
         }
         goToNextPage() {
-            if (this.pageNumber < this.numberOfPages) {
+            if (this.hasNext) {
                 this.flipTo(this.pageNumber + 1);
             }
         }
@@ -54570,7 +54572,7 @@ let PagerComponent = /*@__PURE__*/ (() => {
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("pager", ctx.isAPager);
             }
-        }, inputs: { isAPager: "isAPager", pageNumber: "pageNumber", numberOfPages: "numberOfPages" }, outputs: { flippedTo: "flippedTo" }, decls: 2, vars: 0, consts: [["name", "left", 1, "left", "button", "back-button", 3, "click"], ["name", "right", 1, "right", "button", "next-button", 3, "click"]], template: function PagerComponent_Template(rf, ctx) {
+        }, inputs: { isAPager: "isAPager", pageNumber: "pageNumber", numberOfPages: "numberOfPages" }, outputs: { flippedTo: "flippedTo" }, decls: 2, vars: 4, consts: [["name", "left", 1, "left", "button", "back-button", 3, "click"], ["name", "right", 1, "right", "button", "next-button", 3, "click"]], template: function PagerComponent_Template(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "slot", 0);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PagerComponent_Template_slot_click_0_listener() { return ctx.goToPreviousPage(); });
@@ -54578,6 +54580,11 @@ let PagerComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "slot", 1);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PagerComponent_Template_slot_click_1_listener() { return ctx.goToNextPage(); });
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            }
+            if (rf & 2) {
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("visibility", ctx.hasPrevious ? "visible" : "hidden");
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("visibility", ctx.hasNext ? "visible" : "hidden");
             }
         }, styles: ["[_nghost-%COMP%] {\n  display: grid;\n  grid-template-columns: -webkit-max-content 1fr -webkit-max-content;\n  grid-template-columns: max-content 1fr max-content;\n  grid-template-rows: 1fr;\n  grid-template-areas: \"LEFT MIDDLE RIGHT\";\n  align-content: space-around;\n  margin-top: calc(2 * var(--vmin));\n  font-size: calc(2 * var(--font));\n}\n[_nghost-%COMP%]   .left[_ngcontent-%COMP%] {\n  grid-area: LEFT;\n}\n[_nghost-%COMP%]   .right[_ngcontent-%COMP%] {\n  grid-area: RIGHT;\n}\n[_nghost-%COMP%]   .button[_ngcontent-%COMP%] {\n  transition: 500ms color;\n  cursor: pointer;\n}\n[_nghost-%COMP%]   .button[_ngcontent-%COMP%]:hover {\n  color: rgba(17, 50, 51, 0.65);\n}\n[_nghost-%COMP%]   slot[_ngcontent-%COMP%] {\n  display: block;\n}"] });
     return PagerComponent;
