@@ -4,7 +4,7 @@
     <title>Julian | {{ page.title }}</title>
     {% include head.html %}
   </head>
-  <body class="{{ layout.class }}" {% if page.thumbnail %}style="background-image: url('{{ page.thumbnail }}')"{% endif %}>
+  <body class="{{ layout.class }}" {% if page.thumbnail %}style="background-image: url('/assets/img/thumbnails/{{ page.thumbnail }}')"{% endif %}>
     {{ content }}
     {% include scripts.html %}
   </body>
