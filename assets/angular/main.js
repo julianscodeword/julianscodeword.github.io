@@ -54618,7 +54618,7 @@ class JulianComponent {
         this.appearance = _appearance;
     }
     wordClicked(target) {
-        setTimeout(() => window.location.assign(`/${target}`));
+        setTimeout(() => window.location.assign(`/${target}`), 1000);
     }
 }
 let IntrusiveJulianComponent = /*@__PURE__*/ (() => {
