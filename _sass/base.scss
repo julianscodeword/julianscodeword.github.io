@@ -137,7 +137,7 @@ blockquote {
     background-color: #113233;
     padding: 2vmin;
     border-radius: 3px;
-    display: block;
+    display: inline-block;
     color: white;
     text-align: center;
     line-height: calc(1.5 * var(--font));
@@ -151,9 +151,8 @@ blockquote {
 }
 
 .main img {
-    width: 50%;
-    float: left;
-    margin: 1vmin;
+    width: 100%;
+    padding: 2vmin;
 }
 
 x-book > * {
