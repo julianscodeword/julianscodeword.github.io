@@ -54487,8 +54487,8 @@ let BookComponent = /*@__PURE__*/ (() => {
             return Math.round(this.totalWidth / this.pageWidth);
         }
         reset() {
-            this.pageWidth = !!this.element ? 1.02 * this.element.nativeElement.getBoundingClientRect().width : 0;
-            this.totalWidth = !!this.contentElement ? 1.02 * this.contentElement.nativeElement.scrollWidth : 0;
+            this.pageWidth = !!this.element ? 1.04 * this.element.nativeElement.getBoundingClientRect().width : 0;
+            this.totalWidth = !!this.contentElement ? 1.04 * this.contentElement.nativeElement.scrollWidth : 0;
         }
     }
     BookComponent.ɵfac = function BookComponent_Factory(t) { return new (t || BookComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])); };
