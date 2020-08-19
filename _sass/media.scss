@@ -5,7 +5,7 @@
 
     body.content { padding: 4vmin; }
 
-    .readable { column-count: 2; }    
+    article { column-count: 2; }    
 }
 
 @media (orientation: portrait) {
@@ -15,7 +15,7 @@
         --entryWidth: 100%;
     }
 
-    .readable {
+    article {
         column-count: 1;
     }    
 

@@ -129,7 +129,7 @@ body.navigating {
 
 article {
     column-count: 3;
-    column-gap: 2%;
+    column-gap: 4%;
     height: 100%;
 
     p {
@@ -140,13 +140,13 @@ article {
 blockquote {
     width: 100%;
     background-color: #113233;
-    padding: 2vmin 0;
+    padding: 2vmin;
     border-radius: 3px;
     display: inline-block;
     color: white;
     text-align: center;
-    line-height: calc(1.5 * var(--font));
-    font-size: calc(1.5 * var(--font));
+    line-height: calc(1.2 * var(--font));
+    font-size: calc(1.2 * var(--font));
     margin: 2vmin 0;
     font-style: italic;
 
@@ -158,7 +158,7 @@ blockquote {
 article img {
     display: block;
     width: 100%;
-    padding: 2vmin 10vmin;
+    padding: 2vmin;
 }
 
 x-book > * {
