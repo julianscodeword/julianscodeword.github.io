@@ -4,6 +4,8 @@
     :root { --font: 4vmin; }
 
     body.content { padding: 4vmin; }
+
+    .readable { column-count: 2; }    
 }
 
 @media (orientation: portrait) {
