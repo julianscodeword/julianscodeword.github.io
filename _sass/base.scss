@@ -160,6 +160,8 @@ article img {
     height: 40vmin;
     margin: 0 auto;
     padding: 2vmin;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 x-book > * {
