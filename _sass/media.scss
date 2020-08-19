@@ -12,16 +12,16 @@
     article { column-count: 2; }  
 }
 
+@media (max-width: 750px) and (orientation: portrait) {
+    article { column-count: 1; }    
+}
+
 @media (orientation: portrait) {
     input, optgroup, select { flex-basis: calc(100% - 2vmin); }
 
     .entries {
         --entryWidth: 100%;
     }
-
-    article {
-        column-count: 1;
-    }    
 
     body.navigating {
         .header {
