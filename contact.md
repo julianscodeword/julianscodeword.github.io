@@ -3,7 +3,7 @@ layout: default
 title: Contact
 ---
 
-If you'd like to get in touch, drop me a note here. I look forward to hearing from you <i class="icon fas fa-smile"></i>.
+Drop me a note if you'd like to get in touch. I look forward to hearing from you <i class="icon fas fa-smile"></i>!
 
 <form action="https://formspree.io/mjvazzpd" method="POST">
     <input required type="text" name="name" placeholder="Name">
