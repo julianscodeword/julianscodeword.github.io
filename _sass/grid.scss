@@ -12,7 +12,7 @@
     max-height: var(--vh);
     width: 100vw;
     grid-template-columns: max-content minmax(0, 1fr);
-    grid-template-rows: max-content 1fr max-content;
+    grid-template-rows: max-content minmax(0, 1fr) max-content;
     grid-template-areas:
         "UL UR"
         "TL TR"
