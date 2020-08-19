@@ -1,11 +1,15 @@
 :root { --font: 2.5vmin; }
 
+@media (max-width: 1750px) {
+    article { column-count: 2; }
+}
+
 @media (max-width: 650px), (max-height: 650px) {
     :root { --font: 4vmin; }
 
     body.content { padding: 4vmin; }
 
-    article { column-count: 2; }    
+    article { column-count: 2; }  
 }
 
 @media (orientation: portrait) {
