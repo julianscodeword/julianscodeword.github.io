@@ -159,9 +159,10 @@ article img {
     display: block;
     height: 40vmin;
     margin: 0 auto;
-    padding: 2vmin;
+    padding: 4vmin;
     max-width: 100%;
     object-fit: cover;
+    float: left;
 }
 
 x-book > * {
