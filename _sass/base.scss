@@ -40,24 +40,13 @@
 
 body {
     margin: 0;
-    background-color: rgba(17, 50, 51, 0.8);
     font-family: Nunito, sans-serif;
     overflow: hidden;
-    z-index: 1;
-}
-
-body.content::before {
-    content: "";
-    background-image: var(--thumbnail);
-    display: block;
+    background-color: rgba(17,50,51,1);
     background-size: cover;
-    background-position: center left;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: var(--vh);
-    z-index: 0;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-image: var(--thumbnail);
 }
 
 body.navigating {
