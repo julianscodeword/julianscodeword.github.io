@@ -131,6 +131,10 @@ article {
     column-count: 3;
     column-gap: 2%;
     height: 100%;
+
+    p {
+        display: inline-block;
+    }
 }
 
 blockquote {
@@ -151,10 +155,10 @@ blockquote {
     }
 }
 
-.main img {
+article img {
     display: block;
     width: 100%;
-    padding: 2vmin;
+    padding: 2vmin 10vmin;
 }
 
 x-book > * {
