@@ -138,7 +138,7 @@ article {
 }
 
 blockquote {
-    width: 40%;
+    width: 50%;
     background-color: #113233;
     padding: 2vmin;
     border-radius: 3px;
@@ -150,6 +150,7 @@ blockquote {
     margin: 2vmin 6vmin;
     font-style: italic;
     float: left;
+    break-inside: avoid;
 
     p {
         margin: 0;
