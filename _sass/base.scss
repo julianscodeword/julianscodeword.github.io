@@ -138,7 +138,7 @@ article {
 }
 
 blockquote {
-    width: 70%;
+    width: 50%;
     background-color: #113233;
     padding: 2vmin;
     border-radius: 3px;
@@ -149,11 +149,20 @@ blockquote {
     font-size: calc(1.2 * var(--font));
     margin: 2vmin 6vmin;
     font-style: italic;
-    float: left;
     break-inside: avoid;
 
     p {
         margin: 0;
+    }
+}
+
+article {
+    blockquote:nth-child(odd) {
+        float: left;
+    }
+
+    blockquote:nth-child(even) {
+        float: right;
     }
 }
 
