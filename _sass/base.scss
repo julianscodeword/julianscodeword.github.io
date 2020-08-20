@@ -138,7 +138,7 @@ article {
 }
 
 blockquote {
-    width: 50%;
+    width: 60%;
     background-color: #113233;
     padding: 2vmin;
     border-radius: 3px;
@@ -160,27 +160,27 @@ article {
     img {
         display: block;
         height: 40vmin;
-        margin: 4vmin;
+        margin: 0 0 4vmin 0;
         padding: 0;
         max-width: 100%;
         object-fit: cover;
         border-radius: 4px;
-        border: 3vmin solid #113233;
+        border: 2vmin solid #113233;
     }
 
-    img:nth-child(odd) {
+    img:nth-of-type(odd) {
         float: left;
     }
 
-    img:nth-child(even) {
+    img:nth-of-type(even) {
         float: right;
     }
 
-    blockquote:nth-child(odd) {
+    blockquote:nth-of-type(odd) {
         float: left;
     }
 
-    blockquote:nth-child(even) {
+    blockquote:nth-of-type(even) {
         float: right;
     }
 }
