@@ -54465,7 +54465,6 @@ let BookComponent = /*@__PURE__*/ (() => {
             this.isSplitIntoColumns = true;
             this.isABook = true;
             this.pageNumber = 1;
-            this.units = "px";
         }
         flipTo(pageNumber) {
             this.pageNumber = pageNumber;
@@ -54477,18 +54476,12 @@ let BookComponent = /*@__PURE__*/ (() => {
         ngAfterViewChecked() {
             this.updateWidths();
         }
-        get pageOffset() {
-            return (1 - this.pageNumber) * this.pageWidth;
-        }
-        get pageOffsetWithUnits() {
-            return `${this.pageOffset}${this.units}`;
-        }
         get numberOfPages() {
             return Math.round(this.totalWidth / this.pageWidth);
         }
         updateWidths() {
-            this.pageWidth = !!this.element ? 1.04 * this.element.nativeElement.getBoundingClientRect().width : 0;
-            this.totalWidth = !!this.contentElement ? 1.04 * this.contentElement.nativeElement.scrollWidth : 0;
+            this.pageWidth = !!this.element ? this.element.nativeElement.getBoundingClientRect().width : 0;
+            this.totalWidth = !!this.contentElement ? this.contentElement.nativeElement.scrollWidth : 0;
         }
         reset() {
             const numberOfPages = this.numberOfPages;
@@ -54514,7 +54507,7 @@ let BookComponent = /*@__PURE__*/ (() => {
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("columns", ctx.isSplitIntoColumns)("book", ctx.isABook);
             }
-        }, inputs: { isSplitIntoColumns: "isSplitIntoColumns", isABook: "isABook", pageNumber: "pageNumber", units: "units" }, decls: 4, vars: 5, consts: [[1, "wrapper", "top"], ["name", "content", 1, "binding"], ["content", ""], [1, "bottom", 3, "pageNumber", "numberOfPages", "flippedTo"]], template: function BookComponent_Template(rf, ctx) {
+        }, inputs: { isSplitIntoColumns: "isSplitIntoColumns", isABook: "isABook", pageNumber: "pageNumber" }, decls: 4, vars: 6, consts: [[1, "wrapper", "top"], ["name", "content", 1, "binding"], ["content", ""], [1, "bottom", 3, "pageNumber", "numberOfPages", "flippedTo"]], template: function BookComponent_Template(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "slot", 1, 2);
@@ -54525,11 +54518,11 @@ let BookComponent = /*@__PURE__*/ (() => {
             }
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMapInterpolate1"]("--pageNumber: ", ctx.pageNumber, "");
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMapInterpolate2"]("--pageNumber: ", ctx.pageNumber, "; --pageWidth: ", ctx.pageWidth, ";");
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("pageNumber", ctx.pageNumber)("numberOfPages", ctx.numberOfPages);
             }
-        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  --pageWidth: 100%;\n  --columnGap: 4%;\n  --pageWidthAndGap: calc(var(--pageWidth) * 1px + var(--columnGap));\n  --pageNumber: 1;\n  --pageOffset: calc((1 - var(--pageNumber)) * var(--pageWidthAndGap));\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n  position: relative;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  height: 100%;\n  left: var(--pageOffset);\n}\n:host slot {\n  display: block;\n}"], encapsulation: 3 });
+        }, directives: [_pager_pager_component__WEBPACK_IMPORTED_MODULE_1__["PagerComponent"]], styles: [":host {\n  --columnGap: 3vw;\n  --pageWidthAndGap: calc(var(--pageWidth) + var(--columnGap));\n  --pageOffset: calc((1 - var(--pageNumber)) * var(--pageWidthAndGap));\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr -webkit-max-content;\n  grid-template-rows: 1fr max-content;\n  grid-template-areas: \"BINDING\" \"NAV\";\n}\n:host .top {\n  grid-area: BINDING;\n  overflow: hidden;\n  position: relative;\n}\n:host .bottom {\n  grid-area: NAV;\n}\n:host .binding {\n  position: relative;\n  left: 0;\n  transition: left 500ms;\n  height: 100%;\n  left: var(--pageOffset);\n}\n:host slot {\n  display: block;\n}"], encapsulation: 3 });
     return BookComponent;
 })();
 
