@@ -5,20 +5,12 @@
         width: 25vmin;
     }
 
-    img:nth-of-type(odd) {
-        float: left;
-    }
-
-    img:nth-of-type(even) {
-        float: right;
-    }
-
-    blockquote:nth-of-type(odd) {
+    img:nth-of-type(odd), blockquote:nth-of-type(odd) {
         float: left;
         margin-right: 2vmin;
     }
 
-    blockquote:nth-of-type(even) {
+    img:nth-of-type(even), blockquote:nth-of-type(even) {
         float: right;
         margin-left: 2vmin;
     }
