@@ -1,14 +1,31 @@
 :root { --font: 2.5vmin; }
 
-@media (max-width: 1500px) {
-    article {
-        column-count: 2;
-
-        blockquote {
-            float: unset;
-            width: 100%;
-        }
+@media (min-width: 1500px) {
+    img, blockquote {
+        width: 25vmin;
     }
+
+    img:nth-of-type(odd) {
+        float: left;
+    }
+
+    img:nth-of-type(even) {
+        float: right;
+    }
+
+    blockquote:nth-of-type(odd) {
+        float: left;
+        margin-right: 2vmin;
+    }
+
+    blockquote:nth-of-type(even) {
+        float: right;
+        margin-left: 2vmin;
+    }
+}
+
+@media (max-width: 1500px) {
+    article { column-count: 2; }
 }
 
 @media (max-width: 650px), (max-height: 650px) {
