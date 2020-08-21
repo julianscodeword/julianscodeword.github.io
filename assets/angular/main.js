@@ -54552,6 +54552,14 @@ let PagerComponent = /*@__PURE__*/ (() => {
         }
         get hasNext() { return this.pageNumber < this.numberOfPages; }
         get hasPrevious() { return this.pageNumber > 1; }
+        onKeyPress(event) {
+            if (event.key === PagerComponent.LeftKeyCode) {
+                this.goToPreviousPage();
+            }
+            if (event.key === PagerComponent.RightKeyCode) {
+                this.goToNextPage();
+            }
+        }
         goToPreviousPage() {
             if (this.hasPrevious) {
                 this.flipTo(this.pageNumber - 1);
@@ -54567,8 +54575,13 @@ let PagerComponent = /*@__PURE__*/ (() => {
             this.flippedTo.emit(this.pageNumber);
         }
     }
+    PagerComponent.LeftKeyCode = 'Left';
+    PagerComponent.RightKeyCode = 'Right';
     PagerComponent.ɵfac = function PagerComponent_Factory(t) { return new (t || PagerComponent)(); };
     PagerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PagerComponent, selectors: [["x-pager"]], hostVars: 2, hostBindings: function PagerComponent_HostBindings(rf, ctx) {
+            if (rf & 1) {
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keypress", function PagerComponent_keypress_HostBindingHandler($event) { return ctx.onKeyPress($event); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"]);
+            }
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("pager", ctx.isAPager);
             }
