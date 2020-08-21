@@ -54477,7 +54477,7 @@ let BookComponent = /*@__PURE__*/ (() => {
             this.updateWidths();
         }
         get numberOfPages() {
-            return Math.round(this.totalWidth / this.pageWidth);
+            return Math.ceil(this.totalWidth / this.pageWidth);
         }
         updateWidths() {
             this.pageWidth = !!this.element ? this.element.nativeElement.getBoundingClientRect().width : 0;
