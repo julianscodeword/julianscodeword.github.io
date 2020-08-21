@@ -54553,10 +54553,10 @@ let PagerComponent = /*@__PURE__*/ (() => {
         get hasNext() { return this.pageNumber < this.numberOfPages; }
         get hasPrevious() { return this.pageNumber > 1; }
         onKeyPress(event) {
-            if (event.key === PagerComponent.LeftKeyCode) {
+            if (event.key === PagerComponent.KeyCodes.Left) {
                 this.goToPreviousPage();
             }
-            if (event.key === PagerComponent.RightKeyCode) {
+            if (event.key === PagerComponent.KeyCodes.Right) {
                 this.goToNextPage();
             }
         }
@@ -54575,8 +54575,10 @@ let PagerComponent = /*@__PURE__*/ (() => {
             this.flippedTo.emit(this.pageNumber);
         }
     }
-    PagerComponent.LeftKeyCode = 'Left';
-    PagerComponent.RightKeyCode = 'Right';
+    PagerComponent.KeyCodes = {
+        Left: 'ArrowLeft',
+        Right: 'ArrowRight'
+    };
     PagerComponent.ɵfac = function PagerComponent_Factory(t) { return new (t || PagerComponent)(); };
     PagerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PagerComponent, selectors: [["x-pager"]], hostVars: 2, hostBindings: function PagerComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
