@@ -54580,7 +54580,7 @@ let PagerComponent = /*@__PURE__*/ (() => {
     PagerComponent.ɵfac = function PagerComponent_Factory(t) { return new (t || PagerComponent)(); };
     PagerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PagerComponent, selectors: [["x-pager"]], hostVars: 2, hostBindings: function PagerComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keypress", function PagerComponent_keypress_HostBindingHandler($event) { return ctx.onKeyPress($event); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"]);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keydown", function PagerComponent_keydown_HostBindingHandler($event) { return ctx.onKeyPress($event); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"]);
             }
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("pager", ctx.isAPager);
