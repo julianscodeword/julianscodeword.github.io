@@ -54475,7 +54475,7 @@ let BookComponent = /*@__PURE__*/ (() => {
             this.reset();
         }
         ngAfterViewChecked() {
-            this.reset();
+            this.updateWidths();
         }
         get pageOffset() {
             return (1 - this.pageNumber) * this.pageWidth;
@@ -54491,11 +54491,11 @@ let BookComponent = /*@__PURE__*/ (() => {
             this.totalWidth = !!this.contentElement ? 1.04 * this.contentElement.nativeElement.scrollWidth : 0;
         }
         reset() {
-            const hasNumberOfPages = !isNaN(this.numberOfPages);
-            const progress = this.pageNumber / this.numberOfPages;
+            const numberOfPages = this.numberOfPages;
+            const pageNumber = this.pageNumber;
             this.updateWidths();
-            this.pageNumber = hasNumberOfPages ? Math.floor(progress * this.numberOfPages) : 1;
-            console.log("RESET", hasNumberOfPages, progress, this.pageNumber, this.numberOfPages);
+            this.pageNumber = numberOfPages ? Math.floor(pageNumber * this.numberOfPages / numberOfPages) : 1;
+            console.log("RESET", pageNumber, numberOfPages, this.pageNumber, this.numberOfPages);
         }
     }
     BookComponent.ɵfac = function BookComponent_Factory(t) { return new (t || BookComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])); };
