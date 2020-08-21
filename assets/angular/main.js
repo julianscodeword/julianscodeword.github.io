@@ -54487,7 +54487,7 @@ let BookComponent = /*@__PURE__*/ (() => {
             const numberOfPages = this.numberOfPages;
             const pageNumber = this.pageNumber;
             this.updateWidths();
-            this.pageNumber = numberOfPages ? Math.floor(pageNumber * this.numberOfPages / numberOfPages) : 1;
+            this.pageNumber = numberOfPages ? Math.ceil(pageNumber * this.numberOfPages / numberOfPages) : 1;
             console.log("RESET", pageNumber, numberOfPages, this.pageNumber, this.numberOfPages);
         }
     }
