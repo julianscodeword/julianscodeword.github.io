@@ -18,6 +18,10 @@
 
 @media (max-width: 1500px) {
     article { column-count: 2; }
+
+    article img {
+        display: none;
+    }
 }
 
 @media (max-width: 650px), (max-height: 650px) {
