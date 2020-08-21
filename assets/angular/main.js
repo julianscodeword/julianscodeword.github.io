@@ -54486,13 +54486,16 @@ let BookComponent = /*@__PURE__*/ (() => {
         get numberOfPages() {
             return Math.round(this.totalWidth / this.pageWidth);
         }
-        reset() {
-            const pageNumber = this.pageNumber;
-            const numberOfPages = this.numberOfPages;
+        updateWidths() {
             this.pageWidth = !!this.element ? 1.04 * this.element.nativeElement.getBoundingClientRect().width : 0;
             this.totalWidth = !!this.contentElement ? 1.04 * this.contentElement.nativeElement.scrollWidth : 0;
-            this.pageNumber = Math.floor(pageNumber * this.numberOfPages / numberOfPages);
-            console.log("RESET", pageNumber, numberOfPages, this.pageNumber, this.numberOfPages);
+        }
+        reset() {
+            const hasNumberOfPages = !isNaN(this.numberOfPages);
+            const progress = this.pageNumber / this.numberOfPages;
+            this.updateWidths();
+            this.pageNumber = hasNumberOfPages ? Math.floor(progress * this.numberOfPages) : 1;
+            console.log("RESET", hasNumberOfPages, progress, this.pageNumber, this.numberOfPages);
         }
     }
     BookComponent.ɵfac = function BookComponent_Factory(t) { return new (t || BookComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])); };
