@@ -183,6 +183,33 @@ x-book.ready > * {
 
 h1, h2, h3, p { margin: 0 0 2vmin 0; padding: 0; }
 
-.rating .icon {
-    font-size: 0.8em;
+.summary {
+    .item {
+        .title {}
+        .description {}
+    }
+}
+
+.ratings {
+    .rating {
+        width: 100%;
+
+        .type { display: inline-block; width: 20%; text-align: center; }
+        .bar {
+            display: inline-block;
+            width: 80%;
+            background-color: grey;
+
+            .fill {
+                display: inline-block;
+                background-color: silver;
+
+                .fill-1 { width: 20%; }
+                .fill-2 { width: 40%; }
+                .fill-3 { width: 60%; }
+                .fill-4 { width: 80%; }
+                .fill-5 { width: 100%; }
+            }
+        }
+    }
 }
