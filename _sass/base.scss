@@ -218,21 +218,31 @@ h1, h2, h3, p { margin: 0 0 2vmin 0; padding: 0; }
                 background-color: grey;
                 border-radius: 1vmin;
                 height: 100%;
+                text-align: right;
+
+                &:after {
+                    display: block;
+                    margin-right: 1vmin;
+                    color: white;
+                }
+
+                &.fill-0 { width: 10%; }
+                &.fill-0:after { content: "0%"; }
 
                 &.fill-1 { width: 20%; }
-                &.fill-1:after { content: "1"; }
+                &.fill-1:after { content: "20%"; }
 
                 &.fill-2 { width: 40%; }
-                &.fill-2:after { content: "2"; }
+                &.fill-2:after { content: "40%"; }
 
                 &.fill-3 { width: 60%; }
-                &.fill-3:after { content: "3"; }
+                &.fill-3:after { content: "60%"; }
 
                 &.fill-4 { width: 80%; }
-                &.fill-4:after { content: "4"; }
+                &.fill-4:after { content: "80%"; }
 
                 &.fill-5 { width: 100%; }
-                &.fill-5:after { content: "5"; }
+                &.fill-5:after { content: "100%"; }
             }
         }
     }
