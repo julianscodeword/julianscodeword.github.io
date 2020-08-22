@@ -3,15 +3,9 @@ layout: post
 title: About
 ---
 
-![me](/assets/img/avatar2.jpg)
+![me](/assets/img/avatar.jpg)
 
-G'day! I reckon a good writer is like Leonardo Dicaprio's character in Inception. If you've seen the 2010 classic, then think of that; if you haven't, then this is all going to fall flat (in that case, think Jack the Giant slayer–the 2013 box-office flop). In the film, a team of people enter someone’s dreams to plant an idea. The aim is it plant it so deeply that their target has no idea how it got there.
-
-> Cobb: "Once an idea has taken hold of the brain it's almost impossible to eradicate.
-
-As technical writers, even though our readers are wide awake (unless your target audience is narcoleptics), our goal is still the same–we want our audience to be left with an idea. When words get in the way, we haven't done our job.
-
-> I want to give you a voice that's loud and clear!
+> Let me give you a voice that's loud and clear!
 
 I’ve been writing and reviewing documents in a professional environment for over ten years. Having worked as a Data Engineer at both online businesses and consulting companies in industries as diverse as finance and smart lighting, communicating ideas in a way that makes sense to readers is just as natural to me as speaking techobabble (or Scala).
 
