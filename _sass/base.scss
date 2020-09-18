@@ -190,6 +190,19 @@ h1, h2, h3, p { margin: 0 0 2vmin 0; padding: 0; }
     }
 }
 
+pre {
+    background-color: #222222;
+    color: white;
+    padding: 2vmin;
+    font-size: 0.7em;
+    font-family: monospace;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
 .ratings {
     margin: 2vmin 0;
 
