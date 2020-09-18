@@ -1,5 +1,5 @@
 ---
-title:  "What I'm addicted to this week"
+title:  "What I'm addicted to right now"
 thumbnail: "code.jpg"
 description: "What are some cool ways to use static factory methods."
 ---
