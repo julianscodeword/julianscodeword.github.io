@@ -54552,6 +54552,27 @@ let PagerComponent = /*@__PURE__*/ (() => {
         }
         get hasNext() { return this.pageNumber < this.numberOfPages; }
         get hasPrevious() { return this.pageNumber > 1; }
+        swipe(e, when) {
+            const coord = [e.changedTouches[0].clientX, e.changedTouches[0].clientY];
+            const time = new Date().getTime();
+            if (when === 'start') {
+                this.swipeCoord = coord;
+                this.swipeTime = time;
+            }
+            else if (when === 'end') {
+                const direction = [coord[0] - this.swipeCoord[0], coord[1] - this.swipeCoord[1]];
+                const duration = time - this.swipeTime;
+                if (duration < 1000 && Math.abs(direction[0]) > 30
+                    && Math.abs(direction[0]) > Math.abs(direction[1] * 3)) {
+                    if (direction[0] < 0) {
+                        this.goToNextPage();
+                    }
+                    else {
+                        this.goToPreviousPage();
+                    }
+                }
+            }
+        }
         onKeyPress(event) {
             if (event.key === PagerComponent.KeyCodes.Left) {
                 this.goToPreviousPage();
@@ -54582,7 +54603,7 @@ let PagerComponent = /*@__PURE__*/ (() => {
     PagerComponent.ɵfac = function PagerComponent_Factory(t) { return new (t || PagerComponent)(); };
     PagerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PagerComponent, selectors: [["x-pager"]], hostVars: 2, hostBindings: function PagerComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keydown", function PagerComponent_keydown_HostBindingHandler($event) { return ctx.onKeyPress($event); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"]);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchstart", function PagerComponent_touchstart_HostBindingHandler($event) { return ctx.swipe($event, ctx.start); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"])("touchend", function PagerComponent_touchend_HostBindingHandler($event) { return ctx.swipe($event, ctx.end); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"])("keydown", function PagerComponent_keydown_HostBindingHandler($event) { return ctx.onKeyPress($event); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"]);
             }
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("pager", ctx.isAPager);
