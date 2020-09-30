@@ -24,6 +24,10 @@
     }
 }
 
+@media (max-width: 1000px) {
+    body.content { padding: 4vmin; }
+}
+
 @media (max-width: 650px), (max-height: 650px) {
     :root { --font: 4vmin; }
 
