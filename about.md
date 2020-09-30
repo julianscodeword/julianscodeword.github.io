@@ -17,6 +17,6 @@ I’m also a huge advocate of the plain English movement (in case I haven't made
 
 Whether it be a technical document, a long-form article, or a creative writing piece, I work hard to find ways to communicate ideas in a clear and effective way. I see everything through to the end, but until we get there, I will remain passionate about finding the right hook that will draw readers in, and creating substance that will keep people reading until the very last word.
 
-> I look forward to working together!
+> Let's work together!
 
 If you've got something technical that you need to get written, I'm here to help. You can get in touch with me via my <a href="/contact">contact page</a>. Oh, and I promise I'll save my technobabble (and my French) for when and where it's needed.
