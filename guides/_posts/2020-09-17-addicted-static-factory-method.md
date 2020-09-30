@@ -1,7 +1,7 @@
 ---
-title:  "What I'm addicted to right now"
+title:  "Static factory bliss"
 thumbnail: "code.jpg"
-description: "What are some cool ways to use static factory methods."
+description: "How static factory methods make for cleaner code."
 ---
 
 Do you use static factory methods? I've been using them for a while, ever since I read about them in Joshua Bloch's Effective Java. I mean, I used them prior to that, but his explanation really hit home how useful they can be, and I've been addicted to them ever since.
