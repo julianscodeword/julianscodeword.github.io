@@ -133,44 +133,43 @@ article {
     column-gap: 3%;
     height: 100%;
 
-    p {
-        display: block;
-    }
-}
-
-blockquote {
-    width: 100%;
-    max-width: 100%;
-    background-color: #113233;
-    padding: 2vmin;
-    border-radius: 3px;
-    display: inline-block;
-    color: white;
-    text-align: center;
-    line-height: calc(1.5 * var(--font));
-    font-size: calc(1.2 * var(--font));
-    font-style: italic;
-    break-inside: avoid;
-    margin: 0 0 2vmin 0;
-
-    p {
-        margin: 0;
-    }
-}
-
-article {
-    img {
-        display: block;
+    .decoration {
         max-width: 100%;
-        padding: 0;
+        width: 50%;
+        float: left;
+        margin: 0.5em 0.5em 0.5em 0;
+    }
+    
+    .right {
+        float: right;
+        margin: 0.5em 0 0.5em 0.5em;
+    }
+    
+    p {
+        margin: 0 0 1em 0;
+    }
+    
+    img {
         object-fit: cover;
         object-position: center;
-        border-radius: 4px;
-        border: 1vmin solid #113233;
-        width: 42vmin;
-        float: left;
-        margin: 0 2vmin 2vmin 0;
-        height: 42vmin;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-radius: 0.25em;
+    }
+    
+    q {
+        display: block;
+        font-size: 1.25em;
+        line-height: 1.25em;
+        font-style: italic;
+        padding: 1em;
+        background: #113233;
+        color: white;
+        text-align: center;
+        break-inside: avoid;
+        margin: 0;
+        border-radius: 0.25em;
     }
 }
 

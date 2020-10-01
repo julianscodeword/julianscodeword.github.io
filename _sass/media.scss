@@ -1,18 +1,21 @@
 :root { --font: 2.5vmin; }
 
-@media (min-width: 1500px) {
-    img, blockquote {
-        width: 25vmin;
+
+@media (max-width: 500px) {
+    .decoration, .decoration.left, .decoration.right {
+        float: none;
     }
 
-    img:nth-of-type(odd), blockquote:nth-of-type(odd) {
-        float: left;
-        margin-right: 2vmin;
+    img.decoration {
+        width: 100%;
     }
 
-    img:nth-of-type(even), blockquote:nth-of-type(even) {
-        float: right;
-        margin-left: 2vmin;
+    q.decoration {
+        width: calc(100% - 2em);
+    }
+
+    .left, .right {
+        margin: 0.5em 0;
     }
 }
 
