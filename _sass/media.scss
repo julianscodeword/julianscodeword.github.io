@@ -8,10 +8,12 @@
 
     img.decoration {
         width: 100%;
+        margin: 0.5em 0;
     }
 
     q.decoration {
         width: calc(100% - 2em);
+        margin: 0.5em;
     }
 
     .left, .right {
