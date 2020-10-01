@@ -11,4 +11,4 @@ Most recently, I've worn the hat of Data Engineer for one of Australia's leading
 
 Regardless of whether I'm writing a technical document, a long-form article, or I'm tapping out some code, I work hard to find ways to communicate ideas in a clear and effective way. I'll always see things through to the end, and along the way I'll stay passionate about finding the right hook that will draw people in, and creating substance that will keep them reading until the very last word.
 
-If you've got something technical that you need to get written, I'm interested. Get in touch with me on my <a href="/contact">contact page</a>. I promise I'll save my technobabble (and my French) for when and where it's appropriate!
+If you've got something technical that you need to get written, I'm interested. <a href="/contact">Get in touch with me</a>. I promise I'll save my technobabble (and my French) for when and where it's appropriate!
