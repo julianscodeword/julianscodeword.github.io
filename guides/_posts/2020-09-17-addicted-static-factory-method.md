@@ -11,18 +11,18 @@ How much do you use static factory methods? I've been addicted to them ever sinc
 In languages where types cannot be inferred on a constructor, a static method can get around this problem.
 
 ```typescript
-class Blah<T> {
+class Wrapper<T> {
     constructor(public readonly value: T) {}
     
-    static With<TO>(value: TO): Blah<TO> {
-        return new Blah<TO>(value);
+    static With<TO>(value: TO): Wrapper<TO> {
+        return new Wrapper<TO>(value);
     }
 }
 
 class Consumer {
     run(): void {
-        const blahA = new Blah<string>("some value");
-        const blahB = Blah.With("some value");
+        const blahA = new Wrapper<string>("some value");
+        const blahB = Wrapper.With("some value");
     }
 }
 ```
