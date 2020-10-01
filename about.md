@@ -3,7 +3,7 @@ layout: post
 title: About
 ---
 
-![me](/assets/img/avatar.jpg)
+![me](/assets/img/me.jpg)
 
 > I can give you a voice that's loud and clear!
 

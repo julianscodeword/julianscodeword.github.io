@@ -150,7 +150,7 @@ blockquote {
     font-size: calc(1.2 * var(--font));
     font-style: italic;
     break-inside: avoid;
-    margin: 2vmin 0;
+    margin: 0 0 2vmin 0;
 
     p {
         margin: 0;
