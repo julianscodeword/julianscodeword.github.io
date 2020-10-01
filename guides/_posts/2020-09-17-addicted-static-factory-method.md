@@ -4,7 +4,7 @@ thumbnail: "code.jpg"
 description: "How static factory methods make for cleaner code."
 ---
 
-Do you use static factory methods? I've been using them for a while, ever since I read about them in Joshua Bloch's Effective Java. I mean, I used them prior to that, but his explanation really hit home how useful they can be, and I've been addicted to them ever since.
+How much do you use static factory methods? I've been addicted to them ever since reading Joshua Bloch's Effective Java. I mean, I used them prior to that, but his explanation really hit home how useful they can be. Let's take a look at some of their benefits.
 
 ## Simplifies generics
 
