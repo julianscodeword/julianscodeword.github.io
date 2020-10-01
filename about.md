@@ -7,7 +7,7 @@ title: About
 
 Most recently, I've worn the hat of Data Engineer for one of Australia's leading online businesses, and before that I engineered software solutions for companies in industries as diverse as finance, telecommunications, and smart lighting.
 
-<p>It has been enlightening to work with people across sectors and to explore such a variety of subject matter. <q>I can give you a voice that's loud and clear!</q>One thing it's taught me is to value someone's willingness to learn, their ability to work with others and their future potential over whatever mindblowing skill they might already have.</p>
+<p>It has been enlightening to work with people across sectors and to explore such a variety of subject matter. <q class="decoration">I can give you a voice that's loud and clear!</q>One thing it's taught me is to value someone's willingness to learn, their ability to work with others and their future potential over whatever mindblowing skill they might already have.</p>
 
 I’m also a huge advocate of the plain English movement (in case I haven't made it obvious already). But having moved around and dabbling a bit in everything has also taught me a philosophy that crosses disciplines. Regardless of what industry you're in or what sort of work you're doing, clear communication is vital. A software developer that thinks their only job is just to write working code isn't a very good developer. <q class="decoration">Let's work together!</q>A better developer knows that readability is just as important for long-term success as getting the job done. And, honestly, the same goes for communicating in any language.
 
