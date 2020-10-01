@@ -161,15 +161,16 @@ blockquote {
 article {
     img {
         display: block;
-        width: 100%;
         max-width: 100%;
-        margin: 2vmin 0;
         padding: 0;
         object-fit: cover;
         object-position: center;
-        height: 40vmin;
         border-radius: 4px;
         border: 1vmin solid #113233;
+        width: 42vmin;
+        float: left;
+        margin: 0 2vmin 2vmin 0;
+        height: 42vmin;
     }
 }
 
