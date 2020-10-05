@@ -14,11 +14,9 @@ Actually, it makes me wonder whether anyone has gone agile on a creative task. J
 
 Or, let's give this a go:
 
-<pre><code>
-As a reader,
+<pre><code>As a reader,
 Having purchased your book,
 I want to open to the first page,
-So that I'm transported to another time and place.
-</code></pre>
+So that I'm transported to another time and place.</code></pre>
 
 Okay, so I don't think user stories for stories is going to catch on anytime soon, but here's to November being a little bit of light in an otherwise glum year. Good luck to anyone else who's joining in!
