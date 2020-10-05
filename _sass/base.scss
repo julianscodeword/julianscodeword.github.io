@@ -11,12 +11,13 @@
     transition: 500ms opacity;
 }
 
-.main, .main a {
+.main {
     color: rgba(17, 50, 51, 1.0);
 }
 
 .main a {
     font-weight: bold;
+    color: #0b6065;
 }
 
 .aside {
