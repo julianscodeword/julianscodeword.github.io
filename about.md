@@ -5,7 +5,7 @@ title: About
 
 <p>I've been writing, editing and reviewing technical documents in a professional environment for over ten years. I'm also a freelance web developer, part-time novelist, self-employed cook, most-of-the-time dreamer and full-time dad.</p>
 
-Most recently, I've worn the hat of Data Engineer for one of Australia's leading online businesses, and <img class="decoration" src="/assets/img/me.jpg" alt="me" />before that I engineered software solutions for companies in industries as diverse as finance, telecommunications, and smart lighting.
+Most recently, I've worn the hat of Data Engineer for one of Australia's leading online businesses, and before that I engineered software solutions for companies in industries as diverse as finance, telecommunications, and smart lighting.
 
 <p>It's pretty enjoyable and enlightening to work with people across sectors and to explore such a variety of subject matter. <q class="decoration right">Get in touch and let's work together!</q>One thing it's taught me is to value someone's willingness to learn, their ability to work with others and their future potential over whatever mindblowing skill they might already have.</p>
 
