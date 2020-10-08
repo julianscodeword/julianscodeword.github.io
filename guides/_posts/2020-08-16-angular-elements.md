@@ -4,8 +4,6 @@ thumbnail: "angular.jpg"
 description: "How to create reusable components in angular."
 ---
 
-## Angular Elements (Exporting Custom Elements from Angular)
-
 There's been a bit of [back](https://lea.verou.me/2020/09/the-failed-promise-of-web-components/) and [forth](https://medium.com/swlh/the-failed-criticism-of-web-components-ee94380f3552) recently about web components and how they've failed to live up to their promise of making web development easier and more accessible. I recommend reading the linked articles to get a feel for a flavour of the current sentiment.
 
 That said, I think the intention behind web components—to allow developers to share reusable components—remains both useful and relevant. [Here's](https://css-tricks.com/an-introduction-to-web-components/) a good intro article on CSS tricks that gives a rundown of what they are and what they're used for.
@@ -16,8 +14,8 @@ I use WordPress a lot and while it's really awesome, I decided to use [Jekyll](j
 
 So, back to Angular Elements, why might you want it? It's going to be relevant if:
 
-* you're using another backend framework to manage your website, like Jekyll, or
-* you want to make your components reusable.
+*  you're using another backend framework to manage your website, like Jekyll, or
+*  you want to make your components reusable.
 
 I'd like to touch on the basics of how you can get it up and running in your own Anguar projects.
 
