@@ -41,6 +41,8 @@
     text-align: right;
     color: rgba(255, 255, 255, 0.5);
     font-size: calc(0.75 * var(--font));
+
+    ul, li { list-style-type: none; margin: 0; padding: 0; }
 }
 
 body {
