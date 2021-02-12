@@ -3,7 +3,7 @@ layout: post
 title: About
 ---
 
-<p>I've been writing, editing and reviewing technical documents in a professional environment for over ten years. I'm also a freelance web developer, part-time novelist, self-employed cook, most-of-the-time dreamer and full-time dad.</p>
+<p>I've been writing, editing and reviewing technical documents in a professional environment for over ten years. I'm also a freelance web developer, part-time novelist, self-employed cook, some-of-the-time sleeper and full-time dreamer.</p>
 
 Most recently, I've worn the hat of Data Engineer for one of Australia's leading online businesses, and before that I engineered software solutions for companies in industries as diverse as finance, telecommunications, and smart lighting.
 
