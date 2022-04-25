@@ -1,8 +1,10 @@
 ---
 title:  "Balancing on a pivot with flexbox"
 thumbnail: "flexbox-balancing.jpg"
-description: "My article was published on CSS-Tricks!"
+description: "I've been published on CSS-Tricks!"
 ---
+
+[Here's](https://css-tricks.com/balancing-on-a-pivot-with-flexbox/) the article.
 
 CSS tricks is a great resource for frontend developers. It's hard to do a google search on something angular, javascript or CSS without one of their articles popping up. Reportedly, they get around 7 million views every month, which is an enviable number and a testament to how relevant and useful their content is!
 
