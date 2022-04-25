@@ -7,7 +7,7 @@ Hi!
 
 I'm a freelance web developer, part-time novelist, self-employed cook, some-of-the-time sleeper and full-time dreamer. Most recently, I worked as a Data Engineer at Envato, an online marketplace home to more than 10 million users and 50 million products.
 
-![Me](/assets/img/me.jpg){: .right}
+![Me](/assets/img/me.jpg){: .decoration}
 
 I've been developing software for over 14 years in industries as diverse as insurance and sports wearables. Over the years, I've used written a lot of C#, Java and Python code, and I'm well versed in web technologies both frontend and backend. I completed ScrumMaster training in 2016, and have used version control, CI/CD and virtualisation for many years across an interesting mix of teams and projects.
 
